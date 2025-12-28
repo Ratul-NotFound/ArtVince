@@ -1,0 +1,10 @@
+// Main Components
+export { default as Navigation } from './Navigation'
+export { default as Hero } from './Hero'
+export { default as Marquee } from './Marquee'
+export { default as ServiceCard } from './ServiceCard'
+export { default as Testimonials } from './Testimonials'
+export { default as Footer } from './Footer'
+export { default as Preloader } from './Preloader'
+export { default as CursorElements } from './CursorElements'
+export { default as GlobalStyles } from './GlobalStyles'
