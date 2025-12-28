@@ -60,7 +60,7 @@ export default function TeamPage() {
           <div className="team-grid" ref={cardsRef}>
             <div className="team-card hover-trigger">
               <div className="team-image">
-                <img src="/images/team/tanvir-rokon.jpg" alt="Tanvir Rokon" />
+                <img src="/images/team/Tanvir Rokon.jpg" alt="Tanvir Rokon" />
               </div>
               <div className="team-info">
                 <h3>Tanvir Rokon</h3>
@@ -71,7 +71,7 @@ export default function TeamPage() {
 
             <div className="team-card hover-trigger">
               <div className="team-image">
-                <img src="/images/team/imtiaz-ahamed.jpg" alt="Imtiaz Ahamed" />
+                <img src="/images/team/Imtiaz-ahmed.jpg" alt="Imtiaz Ahamed" />
               </div>
               <div className="team-info">
                 <h3>Imtiaz Ahamed</h3>
@@ -82,7 +82,7 @@ export default function TeamPage() {
 
             <div className="team-card hover-trigger">
               <div className="team-image">
-                <img src="/images/team/mithila.jpg" alt="S A Mithila" />
+                <img src="/images/team/samithila.jpg" alt="S A Mithila" />
               </div>
               <div className="team-info">
                 <h3>S A Mithila</h3>

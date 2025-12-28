@@ -357,6 +357,7 @@ export default function Hero() {
 
         <div className="portfolio-carousel" ref={cardsRef}>
           {[1, 2, 3, 4, 5, 6, 7].map((i) => {
+            const heroImages = ['char_1.jpg', 'char_2.jpg', 'char_3.jpg', 'char_4.jpeg', 'char_5.jpg', 'gun_1.jpeg', 'gun_2.jpg']
             const categories = [
               '3D Design',
               'Character Art',
@@ -371,7 +372,7 @@ export default function Hero() {
                 <div className="card-shine"></div>
                 <div className="card-content">
                   <img
-                    src={`/images/hero/project-${i + 1}.jpg`}
+                    src={`/images/hero/${heroImages[i]}`}
                     alt={`Project ${i}`}
                     draggable={false}
                     loading="lazy"

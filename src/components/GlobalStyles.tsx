@@ -2870,6 +2870,35 @@ export default function GlobalStyles() {
         opacity: 1;
       }
 
+      .team-image {
+        width: 100%;
+        height: 280px;
+        margin: 0 auto 20px;
+        border-radius: 8px;
+        overflow: hidden;
+        border: 2px solid var(--line);
+        transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+      }
+
+      .team-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        filter: grayscale(100%);
+        transition: filter 0.4s ease, transform 0.4s ease;
+      }
+
+      .team-card:hover .team-image {
+        border-color: var(--accent);
+        box-shadow: 0 0 20px rgba(204, 255, 0, 0.2);
+      }
+
+      .team-card:hover .team-image img {
+        filter: grayscale(0%);
+        transform: scale(1.05);
+      }
+
       .team-avatar {
         width: 120px;
         height: 120px;
@@ -3285,6 +3314,11 @@ export default function GlobalStyles() {
           padding: 25px;
         }
 
+        .team-image {
+          height: 220px;
+          margin-bottom: 15px;
+        }
+
         .team-name {
           font-size: 18px;
         }
@@ -3321,6 +3355,11 @@ export default function GlobalStyles() {
         .contact-form,
         .contact-info {
           padding: 20px;
+        }
+
+        .team-image {
+          height: 180px;
+          margin-bottom: 12px;
         }
 
         .form-group input,
