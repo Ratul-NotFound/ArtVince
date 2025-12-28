@@ -371,7 +371,7 @@ export default function Hero() {
                 <div className="card-shine"></div>
                 <div className="card-content">
                   <img
-                    src={`https://via.placeholder.com/380x440/1a1a1a/91ff6a?text=PROJECT+${i}`}
+                    src={`/images/hero/project-${i + 1}.jpg`}
                     alt={`Project ${i}`}
                     draggable={false}
                     loading="lazy"

@@ -11,6 +11,18 @@ interface ServiceCardProps {
 
 export default function ServiceCard({ title, description, index }: ServiceCardProps) {
   const cardRef = useRef<HTMLDivElement>(null)
+  
+  // Map service titles to image folders
+  const imageMap: Record<string, string> = {
+    '3D PRODUCT ANIMATION': '/images/services/3d-product-animation',
+    '3D INDUSTRIAL DESIGN': '/images/services/3d-industrial-design',
+    'CHARACTER MODELING': '/images/services/character-modeling',
+    'LOW-POLY GAME ASSETS': '/images/services/game-assets',
+    'GAME ENVIRONMENT DESIGN': '/images/services/game-environment',
+    'CONCEPT ART & MORE': '/images/services/concept-art',
+  }
+  
+  const imagePath = imageMap[title] || `/images/services/3d-product-animation`
 
   useEffect(() => {
     const card = cardRef.current
@@ -68,7 +80,7 @@ export default function ServiceCard({ title, description, index }: ServiceCardPr
           style={{
             width: '100%',
             height: '100%',
-            background: `linear-gradient(135deg, rgba(10, 10, 21, 0.95) 0%, rgba(10, 10, 21, 0.8) 50%, rgba(204, 255, 0, 0.03) 100%), url('https://via.placeholder.com/800x600/0a0a15/0a0a15?text=${title}')`,
+            background: `linear-gradient(135deg, rgba(10, 10, 21, 0.95) 0%, rgba(10, 10, 21, 0.8) 50%, rgba(204, 255, 0, 0.03) 100%), url('${imagePath}/preview.jpg')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             position: 'absolute',
