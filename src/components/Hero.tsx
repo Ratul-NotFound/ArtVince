@@ -245,6 +245,9 @@ export default function Hero() {
       }
     }
 
+    let scrollAccumulator = 0
+    const scrollThreshold = 80 // Requires 80 units of scroll to change card
+
     const handleMouseUp = () => {
       isDragging = false
     }
@@ -254,15 +257,22 @@ export default function Hero() {
       
       e.preventDefault()
       
-      clearTimeout(scrollTimeout)
-      const direction = e.deltaY > 0 ? 1 : -1
-      const newIndex = indexRef.current + direction
-      const finalIndex = ((newIndex % totalCards) + totalCards) % totalCards
-      indexRef.current = finalIndex
-      setCurrentIndex(finalIndex)
+      // Accumulate scroll delta instead of immediate change
+      scrollAccumulator += e.deltaY
       
-      // Increased debounce to 300ms for more controlled scrolling
-      scrollTimeout = setTimeout(() => {}, 300)
+      // Only change card when threshold is reached
+      if (Math.abs(scrollAccumulator) >= scrollThreshold) {
+        clearTimeout(scrollTimeout)
+        const direction = scrollAccumulator > 0 ? 1 : -1
+        const newIndex = indexRef.current + direction
+        const finalIndex = ((newIndex % totalCards) + totalCards) % totalCards
+        indexRef.current = finalIndex
+        setCurrentIndex(finalIndex)
+        
+        // Reset accumulator and set long debounce
+        scrollAccumulator = 0
+        scrollTimeout = setTimeout(() => {}, 800)
+      }
     }
 
     const handleTouchStart = (e: TouchEvent) => {
@@ -320,7 +330,7 @@ export default function Hero() {
         const finalIndex = ((newIndex % totalCards) + totalCards) % totalCards
         indexRef.current = finalIndex
         setCurrentIndex(finalIndex)
-        scrollTimeout = setTimeout(() => {}, 300)
+        scrollTimeout = setTimeout(() => {}, 800)
       } else if (e.key === 'ArrowLeft') {
         e.preventDefault()
         clearTimeout(scrollTimeout)
@@ -328,7 +338,7 @@ export default function Hero() {
         const finalIndex = ((newIndex % totalCards) + totalCards) % totalCards
         indexRef.current = finalIndex
         setCurrentIndex(finalIndex)
-        scrollTimeout = setTimeout(() => {}, 300)
+        scrollTimeout = setTimeout(() => {}, 800)
       }
     }
 
