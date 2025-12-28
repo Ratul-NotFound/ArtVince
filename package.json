@@ -1,0 +1,49 @@
+{
+  "name": "artvince-agency",
+  "version": "1.0.0",
+  "description": "Full-stack 3D design agency platform with admin panel",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "server": "node server/index.js",
+    "dev:server": "nodemon server/index.js",
+    "dev:all": "concurrently \"npm run dev\" \"npm run dev:server\""
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "next": "^14.0.0",
+    "typescript": "^5",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "axios": "^1.6.0",
+    "zustand": "^4.4.0",
+    "react-hook-form": "^7.48.0",
+    "zod": "^3.22.4",
+    "@hookform/resolvers": "^3.3.4",
+    "next-auth": "^4.24.0",
+    "jsonwebtoken": "^9.0.0",
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "mongoose": "^8.0.0",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.3.1",
+    "multer": "^1.4.5-lts.1",
+    "sharp": "^0.33.0",
+    "tailwindcss": "^3.4.1",
+    "postcss": "^8",
+    "autoprefixer": "^10.4.16",
+    "gsap": "^3.12.5",
+    "lenis": "^1.0.42"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "eslint": "^8",
+    "eslint-config-next": "^14.0.0",
+    "nodemon": "^3.0.2",
+    "concurrently": "^8.2.2"
+  }
+}
