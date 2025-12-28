@@ -261,7 +261,29 @@ export default function Hero() {
       indexRef.current = finalIndex
       setCurrentIndex(finalIndex)
       
-      scrollTimeout = setTimeout(() => {}, 100)
+      scrollTimeout = setTimeout(() => {}, 400)
+    }
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (!isHoveringCarousel) return
+
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault()
+        clearTimeout(scrollTimeout)
+        const newIndex = indexRef.current - 1
+        const finalIndex = ((newIndex % totalCards) + totalCards) % totalCards
+        indexRef.current = finalIndex
+        setCurrentIndex(finalIndex)
+        scrollTimeout = setTimeout(() => {}, 300)
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault()
+        clearTimeout(scrollTimeout)
+        const newIndex = indexRef.current + 1
+        const finalIndex = ((newIndex % totalCards) + totalCards) % totalCards
+        indexRef.current = finalIndex
+        setCurrentIndex(finalIndex)
+        scrollTimeout = setTimeout(() => {}, 300)
+      }
     }
 
     const handleTouchStart = (e: TouchEvent) => {
@@ -318,6 +340,7 @@ export default function Hero() {
     carousel.addEventListener('touchstart', handleTouchStart)
     carousel.addEventListener('touchmove', handleTouchMove, { passive: true })
     carousel.addEventListener('touchend', handleTouchEnd)
+    document.addEventListener('keydown', handleKeyDown)
 
     // Initial update
     updateCardPositions(0)
@@ -332,6 +355,7 @@ export default function Hero() {
       carousel.removeEventListener('touchstart', handleTouchStart)
       carousel.removeEventListener('touchmove', handleTouchMove)
       carousel.removeEventListener('touchend', handleTouchEnd)
+      document.removeEventListener('keydown', handleKeyDown)
       clearTimeout(scrollTimeout)
     }
   }, [isHoveringCarousel])
@@ -351,7 +375,7 @@ export default function Hero() {
             Design That Powers Imagination – High-quality 3D character modeling, game-ready assets, and graphic design for creators worldwide.
           </p>
           <div className="scroll-hint">
-            <span className="hint-icon">↕</span> SCROLL • DRAG • EXPLORE
+            <span className="hint-icon">↕</span> SCROLL • DRAG • ← → KEYS
           </div>
         </div>
 
