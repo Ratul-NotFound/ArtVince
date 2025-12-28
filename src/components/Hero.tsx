@@ -261,29 +261,8 @@ export default function Hero() {
       indexRef.current = finalIndex
       setCurrentIndex(finalIndex)
       
-      scrollTimeout = setTimeout(() => {}, 400)
-    }
-
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (!isHoveringCarousel) return
-
-      if (e.key === 'ArrowLeft') {
-        e.preventDefault()
-        clearTimeout(scrollTimeout)
-        const newIndex = indexRef.current - 1
-        const finalIndex = ((newIndex % totalCards) + totalCards) % totalCards
-        indexRef.current = finalIndex
-        setCurrentIndex(finalIndex)
-        scrollTimeout = setTimeout(() => {}, 300)
-      } else if (e.key === 'ArrowRight') {
-        e.preventDefault()
-        clearTimeout(scrollTimeout)
-        const newIndex = indexRef.current + 1
-        const finalIndex = ((newIndex % totalCards) + totalCards) % totalCards
-        indexRef.current = finalIndex
-        setCurrentIndex(finalIndex)
-        scrollTimeout = setTimeout(() => {}, 300)
-      }
+      // Increased debounce to 300ms for more controlled scrolling
+      scrollTimeout = setTimeout(() => {}, 300)
     }
 
     const handleTouchStart = (e: TouchEvent) => {
@@ -331,6 +310,28 @@ export default function Hero() {
       setIsHoveringCarousel(false)
     }
 
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (!isHoveringCarousel) return
+      
+      if (e.key === 'ArrowRight') {
+        e.preventDefault()
+        clearTimeout(scrollTimeout)
+        const newIndex = indexRef.current - 1
+        const finalIndex = ((newIndex % totalCards) + totalCards) % totalCards
+        indexRef.current = finalIndex
+        setCurrentIndex(finalIndex)
+        scrollTimeout = setTimeout(() => {}, 300)
+      } else if (e.key === 'ArrowLeft') {
+        e.preventDefault()
+        clearTimeout(scrollTimeout)
+        const newIndex = indexRef.current + 1
+        const finalIndex = ((newIndex % totalCards) + totalCards) % totalCards
+        indexRef.current = finalIndex
+        setCurrentIndex(finalIndex)
+        scrollTimeout = setTimeout(() => {}, 300)
+      }
+    }
+
     carousel.addEventListener('mousedown', handleMouseDown)
     carousel.addEventListener('mouseenter', handleCarouselEnter)
     carousel.addEventListener('mouseleave', handleCarouselLeave)
@@ -375,7 +376,7 @@ export default function Hero() {
             Design That Powers Imagination – High-quality 3D character modeling, game-ready assets, and graphic design for creators worldwide.
           </p>
           <div className="scroll-hint">
-            <span className="hint-icon">↕</span> SCROLL • DRAG • ← → KEYS
+            <span className="hint-icon">↕</span> SCROLL • DRAG • ARROWS • EXPLORE
           </div>
         </div>
 
