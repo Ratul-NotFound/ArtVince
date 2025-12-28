@@ -12,17 +12,18 @@ interface ServiceCardProps {
 export default function ServiceCard({ title, description, index }: ServiceCardProps) {
   const cardRef = useRef<HTMLDivElement>(null)
   
-  // Map service titles to image folders
+  // Map service titles to image folders or use hero images as fallback
+  const heroImages = ['char_1.jpg', 'char_2.jpg', 'char_3.jpg', 'char_4.jpeg', 'char_5.jpg']
   const imageMap: Record<string, string> = {
-    '3D PRODUCT ANIMATION': '/images/services/3d-product-animation',
-    '3D INDUSTRIAL DESIGN': '/images/services/3d-industrial-design',
-    'CHARACTER MODELING': '/images/services/character-modeling',
-    'LOW-POLY GAME ASSETS': '/images/services/game-assets',
-    'GAME ENVIRONMENT DESIGN': '/images/services/game-environment',
-    'CONCEPT ART & MORE': '/images/services/concept-art',
+    '3D PRODUCT ANIMATION': `/images/hero/${heroImages[0]}`,
+    '3D INDUSTRIAL DESIGN': `/images/hero/${heroImages[1]}`,
+    'CHARACTER MODELING': `/images/hero/${heroImages[2]}`,
+    'LOW-POLY GAME ASSETS': `/images/hero/${heroImages[3]}`,
+    'GAME ENVIRONMENT DESIGN': `/images/hero/${heroImages[4]}`,
+    'CONCEPT ART & MORE': `/images/hero/char_5.jpg`,
   }
   
-  const imagePath = imageMap[title] || `/images/services/3d-product-animation`
+  const imagePath = imageMap[title] || `/images/hero/char_1.jpg`
 
   useEffect(() => {
     const card = cardRef.current
@@ -80,7 +81,7 @@ export default function ServiceCard({ title, description, index }: ServiceCardPr
           style={{
             width: '100%',
             height: '100%',
-            background: `linear-gradient(135deg, rgba(10, 10, 21, 0.95) 0%, rgba(10, 10, 21, 0.8) 50%, rgba(204, 255, 0, 0.03) 100%), url('${imagePath}/preview.jpg')`,
+            background: `linear-gradient(135deg, rgba(10, 10, 21, 0.95) 0%, rgba(10, 10, 21, 0.8) 50%, rgba(204, 255, 0, 0.03) 100%), url('${imagePath}')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             position: 'absolute',
