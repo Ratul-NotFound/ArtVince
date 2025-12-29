@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import './globals.css'
 import { Providers } from '@/app/providers'
 import { GlobalStyles, CursorElements } from '@/components'
 

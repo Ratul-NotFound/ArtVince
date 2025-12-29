@@ -1,0 +1,40 @@
+/* === PRELOADER === */
+
+.loader {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  z-index: 20000;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease, pointer-events 0.3s ease;
+  pointer-events: none;
+}
+
+.loader-text {
+  font-family: var(--font-ui);
+  color: var(--accent);
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.loader-track {
+  width: 250px;
+  height: 2px;
+  background: #222;
+  position: relative;
+  overflow: hidden;
+}
+
+.loader-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background: var(--accent);
+}

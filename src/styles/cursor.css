@@ -1,0 +1,40 @@
+/* === CURSOR === */
+
+.cursor-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 10000;
+  box-shadow: 0 0 8px var(--accent), 0 0 16px rgba(204, 255, 0, 0.4);
+  will-change: left, top;
+  transform: translate(-50%, -50%);
+  left: -10px;
+  top: -10px;
+}
+
+.cursor-circle {
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  will-change: left, top;
+  transform: translate(-50%, -50%);
+  left: -10px;
+  top: -10px;
+}
+
+body.hovered .cursor-circle {
+  border-color: var(--accent);
+  box-shadow: 0 0 20px var(--accent-glow), inset 0 0 15px rgba(204, 255, 0, 0.05);
+  border-width: 3px;
+}
+
+body.hovered .cursor-dot {
+  box-shadow: 0 0 12px var(--accent), 0 0 24px rgba(204, 255, 0, 0.5);
+}
