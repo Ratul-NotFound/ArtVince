@@ -1,59 +1,44 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
-import gsap from 'gsap'
+import { createCarouselController, CarouselController } from '@/lib/CarouselController'
+import { createAnimationController, AnimationController } from '@/lib/AnimationController'
+import { testimonialsData } from '@/lib/DataFactory'
 
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const containerRef = useRef<HTMLDivElement>(null)
+  const carouselRef = useRef<CarouselController | null>(null)
+  const animControllerRef = useRef<AnimationController | null>(null)
 
-  const testimonials = [
-    {
-      text: 'Artvince transformed our game assets with stunning 3D models. Their attention to detail and quick turnaround time exceeded expectations.',
-      author: 'Studios Director',
-      company: 'Game Studio',
-      rating: 5,
-    },
-    {
-      text: 'The character animations were phenomenal. Every frame captured our brand essence perfectly. Highly recommend!',
-      author: 'Creative Lead',
-      company: 'Animation Agency',
-      rating: 5,
-    },
-    {
-      text: 'Working with Artvince was a game-changer for our product visualization. Professional, creative, and results-driven.',
-      author: 'Product Manager',
-      company: 'Tech Company',
-      rating: 5,
-    },
-  ]
-
+  // Initialize carousel controller
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % testimonials.length)
-    }, 6000)
+    animControllerRef.current = createAnimationController()
+    carouselRef.current = createCarouselController({
+      totalItems: testimonialsData.length,
+      autoplay: true,
+      autoplayDuration: 6000,
+    })
 
-    return () => clearInterval(interval)
-  }, [testimonials.length])
+    carouselRef.current.onIndexChangeCallback((newIndex) => {
+      setCurrentIndex(newIndex)
+    })
 
+    return () => {
+      carouselRef.current?.destroy()
+      animControllerRef.current?.killAll()
+    }
+  }, [])
+
+  // Animate container on index change
   useEffect(() => {
-    if (containerRef.current) {
-      gsap.to(containerRef.current, {
-        opacity: 0.8,
-        duration: 0.3,
-        ease: 'power2.out',
-      })
-
-      gsap.to(containerRef.current, {
-        opacity: 1,
-        duration: 0.3,
-        ease: 'power2.out',
-        delay: 0.1,
-      })
+    if (containerRef.current && animControllerRef.current) {
+      animControllerRef.current.fadeOut(containerRef.current, { duration: 0.15 })
+      animControllerRef.current.fadeIn(containerRef.current, { duration: 0.3, delay: 0.1 })
     }
   }, [currentIndex])
 
-  const current = testimonials[currentIndex]
+  const current = testimonialsData[currentIndex]
 
   return (
     <section className="testimonials-section">
@@ -86,11 +71,11 @@ export default function Testimonials() {
           </div>
 
           <div className="testimonial-indicators">
-            {testimonials.map((_, index) => (
+            {testimonialsData.map((_, index) => (
               <button
                 key={index}
                 className={`indicator ${index === currentIndex ? 'active' : ''}`}
-                onClick={() => setCurrentIndex(index)}
+                onClick={() => carouselRef.current?.goToIndex(index)}
               />
             ))}
           </div>

@@ -51,7 +51,7 @@ export default function CursorElements() {
 
       animateCursor()
 
-      return () => {
+      const cleanup = () => {
         document.removeEventListener('mousemove', handleMouseMove)
         interactiveElements.forEach((el) => {
           el.removeEventListener('mouseenter', handleHover)
@@ -59,6 +59,8 @@ export default function CursorElements() {
         })
         cancelAnimationFrame(animationId)
       }
+
+      return cleanup
     }, 100)
 
     return () => clearTimeout(timer)
