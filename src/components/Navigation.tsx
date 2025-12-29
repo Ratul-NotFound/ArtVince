@@ -25,13 +25,22 @@ export default function Navigation() {
       }
     }
 
+    // Prevent body scroll when mobile menu is open
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'unset'
+    }
+
     window.addEventListener('scroll', handleScroll)
     window.addEventListener('resize', handleResize)
+    
     return () => {
       window.removeEventListener('scroll', handleScroll)
       window.removeEventListener('resize', handleResize)
+      document.body.style.overflow = 'unset'
     }
-  }, [])
+  }, [isMobileMenuOpen])
 
   useEffect(() => {
     const handleLinkClick = () => {
@@ -102,6 +111,9 @@ export default function Navigation() {
           <span className="brand-text">ARTVINCE</span>
           <span className="brand-dot">.</span>
           <span className="brand-studio">STUDIO</span>
+          <div className="brand-glow">
+            <div className="line-middle"></div>
+          </div>
         </Link>
         
         <div className={`menu ${isMobileMenuOpen ? 'mobile-active' : ''}`}>
