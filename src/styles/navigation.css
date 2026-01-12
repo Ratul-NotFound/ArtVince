@@ -23,7 +23,7 @@
   background: linear-gradient(180deg, rgba(8, 8, 8, 0.4) 0%, rgba(8, 8, 8, 0.2) 100%);
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
-  border-bottom: 1px solid rgba(204, 255, 0, 0.06);
+  border-bottom: 1px solid rgba(33, 150, 243, 0.06);
   border-top: none;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
   overflow: visible;
@@ -54,7 +54,7 @@
 .nav.scrolled {
   padding: clamp(12px, 2vw, 16px) clamp(16px, 4%, 40px);
   background: linear-gradient(180deg, rgba(8, 8, 8, 0.7) 0%, rgba(8, 8, 8, 0.5) 100%);
-  border-bottom: 1px solid rgba(204, 255, 0, 0.1);
+  border-bottom: 1px solid rgba(33, 150, 243, 0.1);
   border-top: none;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
   min-height: auto;
@@ -250,7 +250,7 @@
 }
 
 .menu-link.active {
-  color: var(--accent);
+  color: #2196f3;
 }
 
 .menu-link.active::before {
@@ -272,7 +272,7 @@
 }
 
 .menu-link:hover {
-  color: var(--accent);
+  color: #2196f3;
   text-shadow: 0 0 12px var(--accent-60);
   transform: translateY(-2px);
 }
@@ -327,20 +327,20 @@
 }
 
 .hamburger-menu:hover {
-  background: rgba(204, 255, 0, 0.05);
+  background: rgba(33, 150, 243, 0.08);
   border-color: var(--accent);
   box-shadow: none;
   transform: none;
 }
 
 .hamburger-menu:hover .hamburger-line {
-  background: var(--accent);
+  background: #2196f3;
 }
 
 .hamburger-line {
   width: 18px;
   height: 1.5px;
-  background: var(--text-60);
+  background: #2196f3;
   border-radius: 0;
   transition: all 0.3s ease;
   box-shadow: none;

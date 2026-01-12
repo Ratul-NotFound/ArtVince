@@ -256,11 +256,11 @@
   letter-spacing: 0.8px;
   text-transform: uppercase;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(204, 255, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(33, 150, 243, 0.2);
 }
 
 .portfolio-card:hover .card-category {
-  box-shadow: 0 6px 20px rgba(204, 255, 0, 0.4);
+  box-shadow: 0 6px 20px rgba(33, 150, 243, 0.4);
   transform: scale(1.05);
 }
 
@@ -277,7 +277,7 @@
 }
 
 .portfolio-card:hover .card-info h3 {
-  text-shadow: 0 0 12px var(--accent), 0 0 24px rgba(204, 255, 0, 0.3);
+  text-shadow: 0 0 12px var(--accent), 0 0 24px rgba(33, 150, 243, 0.3);
 }
 
 .card-info p {
@@ -387,7 +387,7 @@
   margin-top: 15px;
   font-family: var(--font-body);
   font-size: 11px;
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(33, 150, 243, 0.45);
   letter-spacing: 0.8px;
   text-transform: uppercase;
 }
