@@ -12,27 +12,26 @@ interface ServiceCardProps {
 
 export default function ServiceCard({ title, description, index }: ServiceCardProps) {
   const cardRef = useRef<HTMLDivElement>(null)
-  
-  // Map service titles to image folders or use hero images as fallback
-  const heroImages = ['char_1.jpg', 'char_2.jpg', 'char_3.jpg', 'char_4.jpeg', 'char_5.jpg']
+
+  // Animation directions
+  const directions = ['from-left', 'from-right', 'from-top', 'from-bottom', 'from-left', 'from-right']
+  const direction = directions[index % directions.length]
+
+  // Map service title to image path
   const imageMap: Record<string, string> = {
-    '3D PRODUCT ANIMATION': `/images/hero/${heroImages[0]}`,
-    '3D INDUSTRIAL DESIGN': `/images/hero/${heroImages[1]}`,
-    'CHARACTER MODELING': `/images/hero/${heroImages[2]}`,
-    'LOW-POLY GAME ASSETS': `/images/hero/gun_1.jpeg`,
-    'GAME ENVIRONMENT DESIGN': `/images/hero/${heroImages[4]}`,
-    'CONCEPT ART & MORE': `/images/hero/char_5.jpg`,
+    '3D PRODUCT ANIMATION': '/images/hero/char_1.jpg',
+    '3D INDUSTRIAL DESIGN': '/images/hero/char_2.jpg',
+    'CHARACTER MODELING': '/images/hero/char_3.jpg',
+    'LOW-POLY GAME ASSETS': '/images/hero/gun_1.jpeg',
+    'GAME ENVIRONMENT DESIGN': '/images/hero/char_5.jpg',
+    'CONCEPT ART & MORE': '/images/hero/char_4.jpeg',
   }
-  
-  const imagePath = imageMap[title] || `/images/hero/char_1.jpg`
+  const imagePath = imageMap[title] || '/images/hero/char_1.jpg'
 
   useEffect(() => {
     const card = cardRef.current
     if (!card) return
 
-    // Apply reveal animation to all cards with staggered directions
-    const directions = ['from-left', 'from-right', 'from-top', 'from-bottom', 'rotate', 'from-right']
-    const direction = directions[index % directions.length]
     card.classList.add('card-fast-reveal', direction)
 
     // 3D Tilt Effect on MouseMove with gaming vibe
@@ -85,19 +84,23 @@ export default function ServiceCard({ title, description, index }: ServiceCardPr
       <div className="card-inner">
         <div className="card-border"></div>
         <div className="service-glow"></div>
-        <div
-          style={{
-            width: '100%',
-            height: '100%',
-               background: `linear-gradient(135deg, rgba(10, 10, 21, 0.6) 0%, rgba(10, 10, 21, 0.3) 50%, rgba(204, 255, 0, 0.03) 100%), url('${imagePath}')`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            position: 'absolute',
-            inset: 0,
-          }}
-        >
-          <div className="service-badge">{index + 1}</div>
+        <div style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', background: '#111d2b' }}>
+          <img
+            src={imagePath}
+            alt={title}
+            className="card-img"
+            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+            draggable={false}
+            loading="lazy"
+            onError={e => {
+              (e.currentTarget as HTMLImageElement).style.opacity = '0';
+              // Debug: log missing image path
+              // eslint-disable-next-line no-console
+              console.warn('ServiceCard image failed to load:', imagePath);
+            }}
+          />
         </div>
+        <div className="service-badge">{index + 1}</div>
         <div className="card-info">
           <div className="card-cat">{title}</div>
           <h3 className="card-title">{description}</h3>

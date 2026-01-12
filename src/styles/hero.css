@@ -1,3 +1,115 @@
+/* === LIGHT THEME HERO OVERRIDES === */
+body.theme-light .hero-professional {
+  background: #fafdff;
+  border-bottom: 1px solid #d0e3fa;
+}
+body.theme-light .hero-glow-bg {
+  background:
+    radial-gradient(ellipse 80% 80% at 50% 0%, #e3f0ff 0%, transparent 50%),
+    radial-gradient(ellipse 120% 100% at 50% 100%, #eaf1fb 0%, transparent 60%);
+}
+body.theme-light .hero-professional::before {
+  background:
+    radial-gradient(circle at 20% 50%, #eaf1fb 0%, transparent 40%),
+    radial-gradient(circle at 80% 50%, #fafdff 0%, transparent 40%);
+}
+body.theme-light .hero-title-animated {
+  color: #0a1a2f;
+  text-shadow: 0 8px 30px #e3eafc, 0 0 50px #e3eafc;
+}
+body.theme-light .hero-word.hero-accent {
+  background: linear-gradient(120deg, #1976d2 0%, #2196f3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: none;
+  filter: drop-shadow(0 8px 16px #b3d1f7);
+}
+body.theme-light .hero-subtitle-animated {
+  color: #4b5c7a;
+  text-shadow: 0 4px 20px #e3eafc;
+}
+body.theme-light .scroll-hint {
+  color: #1976d2;
+  opacity: 0.7;
+}
+body.theme-light .portfolio-card {
+  background: #fff;
+  border: 1.5px solid #d0e3fa;
+  box-shadow: 0 8px 40px 0 #e3eafc;
+}
+body.theme-light .portfolio-card::before {
+  background: linear-gradient(135deg, #e3f0ff 0%, transparent 50%, #fafdff 100%);
+}
+body.theme-light .portfolio-card::after {
+  background: conic-gradient(from 45deg, #1976d2, #e3f0ff, #2196f3);
+}
+body.theme-light .card-content {
+  background: linear-gradient(135deg, #fafdff 0%, #e3f0ff 100%);
+  border: 2px solid #b3d1f7;
+  box-shadow: 0 20px 60px #e3eafc, inset 0 1px 0 #e3eafc;
+}
+body.theme-light .card-content img {
+  filter: brightness(0.93) contrast(1.08) saturate(1.1);
+}
+body.theme-light .portfolio-card:hover .card-content img {
+  filter: brightness(1.08) contrast(1.18) saturate(1.2);
+}
+body.theme-light .card-overlay {
+  background:
+    radial-gradient(circle at 30% 30%, #b3d1f7 0%, transparent 60%),
+    linear-gradient(135deg, #e3f0ff 0%, transparent 100%);
+}
+body.theme-light .card-info {
+  color: #1a2a3a;
+}
+body.theme-light .card-category {
+  color: #fff;
+  background: #1976d2;
+  box-shadow: 0 4px 12px #b3d1f7;
+}
+body.theme-light .portfolio-card:hover .card-category {
+  box-shadow: 0 6px 20px #b3d1f7;
+}
+body.theme-light .card-info h3 {
+  color: #1976d2;
+  text-shadow: 0 0 12px #b3d1f7, 0 0 24px #e3eafc;
+}
+body.theme-light .portfolio-card:hover .card-info h3 {
+  text-shadow: 0 0 12px #2196f3, 0 0 24px #b3d1f7;
+}
+body.theme-light .card-info p {
+  color: #4b5c7a;
+}
+body.theme-light .portfolio-card:hover .card-info p {
+  color: #1976d2;
+}
+body.theme-light .cta-button {
+  border: 2px solid #1976d2;
+  background: #fff;
+  color: #1976d2;
+  box-shadow: 0 0 20px #e3eafc, inset 0 0 20px #e3eafc;
+}
+body.theme-light .cta-button::before {
+  background: #1976d2;
+}
+body.theme-light .cta-button:hover {
+  color: #fff;
+  background: linear-gradient(90deg, #2196f3 0%, #1976d2 100%);
+  box-shadow: 0 15px 50px #b3d1f7, inset 0 0 20px #e3eafc;
+}
+body.theme-light .cta-button:focus {
+  box-shadow: 0 0 40px #b3d1f7, inset 0 0 30px #e3eafc;
+}
+body.theme-light .cta-button:active {
+  box-shadow: 0 8px 25px #b3d1f7, inset 0 0 20px #e3eafc;
+}
+body.theme-light .interaction-indicator {
+  color: #1976d2;
+}
+body.theme-light .indicator-dot {
+  background: #1976d2;
+}
 /* === HERO PROFESSIONAL PORTFOLIO === */
 
 .hero-professional {

@@ -1,35 +1,9 @@
 'use client'
 
 import { Navigation, ServiceCard, Footer } from '@/components'
+import { servicesData } from '@/lib/DataFactory'
 
 export default function ServicesPage() {
-  const services = [
-    {
-      title: '3D PRODUCT ANIMATION',
-      description: 'High-quality 3D Product Animation that brings your ideas and products to life with stunning visuals',
-    },
-    {
-      title: '3D INDUSTRIAL DESIGN',
-      description: 'Professional 3D Industrial Design services that transform concepts into functional and manufacturable designs',
-    },
-    {
-      title: 'CHARACTER MODELING',
-      description: 'Photorealistic character modeling for games, films, and interactive media',
-    },
-    {
-      title: 'LOW-POLY GAME ASSETS',
-      description: 'Professional game-ready 3D assets optimized for performance',
-    },
-    {
-      title: 'GAME ENVIRONMENT DESIGN',
-      description: 'Immersive world-building and environmental asset creation',
-    },
-    {
-      title: 'CONCEPT ART & MORE',
-      description: 'Custom creative solutions including motion graphics and brand design',
-    },
-  ]
-
   return (
     <div className="overflow-hidden">
       <Navigation />
@@ -54,12 +28,12 @@ export default function ServicesPage() {
           </div>
 
           <div className="grid">
-            {services.map((service, i) => (
-              <ServiceCard 
-                key={i} 
-                title={service.title} 
-                description={service.description} 
-                index={i} 
+            {servicesData.map((service, i) => (
+              <ServiceCard
+                key={service.id}
+                title={service.title}
+                description={service.description}
+                index={i}
               />
             ))}
           </div>
