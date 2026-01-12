@@ -141,15 +141,15 @@
     width: clamp(24px, 4.5vw, 30px);
     height: clamp(20px, 3.5vw, 26px);
     gap: clamp(3px, 0.5vw, 5px);
-    background: linear-gradient(135deg, rgba(204, 255, 0, 0.08) 0%, rgba(204, 255, 0, 0.04) 100%);
-    border: 1px solid rgba(204, 255, 0, 0.2);
+    background: linear-gradient(135deg, rgba(33, 150, 243, 0.08) 0%, rgba(33, 150, 243, 0.04) 100%);
+    border: 1px solid rgba(33, 150, 243, 0.2);
     border-radius: 8px;
     padding: clamp(5px, 1vw, 8px);
   }
 
   .hamburger-menu:active {
-    background: linear-gradient(135deg, rgba(204, 255, 0, 0.12) 0%, rgba(204, 255, 0, 0.06) 100%);
-    border-color: rgba(204, 255, 0, 0.3);
+    background: linear-gradient(135deg, rgba(33, 150, 243, 0.12) 0%, rgba(33, 150, 243, 0.06) 100%);
+    border-color: rgba(33, 150, 243, 0.3);
   }
 
   .menu-label {
@@ -169,7 +169,7 @@
     right: 0;
     background: linear-gradient(135deg, rgba(8, 8, 8, 0.98) 0%, rgba(12, 12, 18, 0.96) 100%);
     padding: 15px 0;
-    border-bottom: 1.5px solid rgba(204, 255, 0, 0.15);
+    border-bottom: 1.5px solid rgba(33, 150, 243, 0.15);
     z-index: 99;
     width: 100%;
     align-items: stretch;
@@ -203,7 +203,7 @@
     top: 0;
     bottom: 0;
     width: 3px;
-    background: linear-gradient(180deg, var(--accent), rgba(204, 255, 0, 0.3));
+    background: linear-gradient(180deg, var(--accent), rgba(33, 150, 243, 0.3));
     transform: scaleY(0);
     transform-origin: top;
     transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -212,10 +212,10 @@
   .menu-link:active,
   .menu-link:hover,
   .menu-link.active {
-    background: rgba(204, 255, 0, 0.08);
+    background: rgba(33, 150, 243, 0.08);
     padding-left: clamp(18px, 4vw, 24px);
     color: var(--accent);
-    text-shadow: 0 0 8px rgba(204, 255, 0, 0.4);
+    text-shadow: 0 0 8px rgba(33, 150, 243, 0.4);
   }
 
   .menu-link:active::before,
