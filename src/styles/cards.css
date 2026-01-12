@@ -60,9 +60,9 @@
   inset: 0;
   background: linear-gradient(45deg, 
     var(--accent) 0%, 
-    rgba(204, 255, 0, 0.5) 25%,
+    rgba(33, 150, 243, 0.5) 25%,
     transparent 50%,
-    rgba(204, 255, 0, 0.5) 75%,
+    rgba(33, 150, 243, 0.5) 75%,
     var(--accent) 100%);
   background-size: 200% 200%;
   opacity: 0;
@@ -90,16 +90,16 @@
   transform-style: flat;
   transition: transform 0.2s ease, box-shadow 0.5s ease;
   box-shadow: 
-    0 0 20px rgba(204, 255, 0, 0.3),
+    0 0 20px rgba(33, 150, 243, 0.3),
     0 20px 60px rgba(0, 0, 0, 0.9),
-    inset 0 1px 0 rgba(204, 255, 0, 0.1);
+    inset 0 1px 0 rgba(33, 150, 243, 0.1);
 }
 
 .card:hover .card-inner {
   box-shadow: 
-    0 0 40px rgba(204, 255, 0, 0.6),
-    0 40px 100px rgba(204, 255, 0, 0.3),
-    inset 0 1px 0 rgba(204, 255, 0, 0.2);
+    0 0 40px rgba(33, 150, 243, 0.6),
+    0 40px 100px rgba(33, 150, 243, 0.3),
+    inset 0 1px 0 rgba(33, 150, 243, 0.2);
 }
 
 /* The Image */
@@ -116,7 +116,7 @@
 /* Hover Effects with Gaming Vibe */
 .card:hover .card-img {
   transform: scale(1.03);
-  filter: brightness(1.2) contrast(1.4) saturate(1.4) hue-rotate(5deg) drop-shadow(0 0 20px rgba(204, 255, 0, 0.4));
+  filter: brightness(1.2) contrast(1.4) saturate(1.4) hue-rotate(5deg) drop-shadow(0 0 20px rgba(33, 150, 243, 0.4));
 }
 
 /* Tech Overlay Border - Gaming Style */
@@ -135,30 +135,30 @@
 .card:hover .card-border {
   border-color: var(--accent);
   box-shadow: 
-    inset 0 0 40px rgba(204, 255, 0, 0.1),
-    0 0 30px rgba(204, 255, 0, 0.4),
-    0 0 60px rgba(204, 255, 0, 0.2);
+    inset 0 0 40px rgba(33, 150, 243, 0.1),
+    0 0 30px rgba(33, 150, 243, 0.4),
+    0 0 60px rgba(33, 150, 243, 0.2);
   border-width: 2px;
 }
 
 /* Card Selection State - Gaming Highlight */
 .card.selected {
   box-shadow: 
-    0 0 100px rgba(204, 255, 0, 0.9),
-    0 0 60px rgba(204, 255, 0, 0.5),
-    inset 0 0 60px rgba(204, 255, 0, 0.25) !important;
-  border-color: rgba(204, 255, 0, 1) !important;
+    0 0 100px rgba(33, 150, 243, 0.9),
+    0 0 60px rgba(33, 150, 243, 0.5),
+    inset 0 0 60px rgba(33, 150, 243, 0.25) !important;
+  border-color: rgba(33, 150, 243, 1) !important;
   z-index: 50 !important;
 }
 
 .card.selected .card-img {
-  filter: brightness(1.4) saturate(1.6) contrast(1.4) hue-rotate(10deg) drop-shadow(0 0 30px rgba(204, 255, 0, 0.5)) !important;
+  filter: brightness(1.4) saturate(1.6) contrast(1.4) hue-rotate(10deg) drop-shadow(0 0 30px rgba(33, 150, 243, 0.5)) !important;
 }
 
 .card.selected .card-border {
   box-shadow: 
-    inset 0 0 60px rgba(204, 255, 0, 0.2),
-    0 0 50px rgba(204, 255, 0, 0.4) !important;
+    inset 0 0 60px rgba(33, 150, 243, 0.2),
+    0 0 50px rgba(33, 150, 243, 0.4) !important;
 }
 
 /* Card Info - Gaming Style Gradient */
@@ -179,12 +179,12 @@
   transform: translateY(0);
   opacity: 1;
   transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-  border-top: 2px solid rgba(204, 255, 0, 0.1);
+  border-top: 2px solid rgba(33, 150, 243, 0.1);
 }
 
 .card:hover .card-info {
-  border-top-color: rgba(204, 255, 0, 0.4);
-  box-shadow: inset 0 20px 40px rgba(204, 255, 0, 0.1);
+  border-top-color: rgba(33, 150, 243, 0.4);
+  box-shadow: inset 0 20px 40px rgba(33, 150, 243, 0.1);
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0.2) 0%,
@@ -197,11 +197,11 @@
   position: absolute;
   top: 20px;
   right: 20px;
-  background: rgba(204, 255, 0, 0.1);
-  border: 2px solid rgba(204, 255, 0, 0.4);
-  color: var(--accent);
-  width: 40px;
-  height: 40px;
+  background: rgba(33, 150, 243, 0.1);
+  border: 2px solid rgba(33, 150, 243, 0.2);
+  box-shadow: 
+    inset 0 0 40px rgba(33, 150, 243, 0),
+    0 0 0 1px rgba(33, 150, 243, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
