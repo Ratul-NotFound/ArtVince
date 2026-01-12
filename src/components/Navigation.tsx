@@ -106,7 +106,7 @@ export default function Navigation() {
   return (
     <nav className={`nav ${isScrolled ? 'scrolled' : ''}`}>
       <div className="nav-bg-effect"></div>
-      <div className="nav-container">
+      <div className="nav-container" style={{display:'flex',justifyContent:'space-between',alignItems:'center',width:'100%'}}>
         <Link href="/" className="brand hover-trigger" style={{display:'flex',alignItems:'center',gap:'10px',textDecoration:'none'}}>
           <img src="/images/fabicon.png" alt="Artvince Logo" style={{height:'32px',width:'32px',borderRadius:'8px',boxShadow:'0 0 8px var(--accent-20)'}} />
           <span className="brand-text" style={{textDecoration:'none',borderBottom:'none',fontWeight:700,letterSpacing:'2px'}}>ARTVINCE</span>
@@ -114,7 +114,40 @@ export default function Navigation() {
           <span style={{display:'inline-block',width:'10px',height:'10px',borderRadius:'50%',background:'radial-gradient(circle,var(--accent-20) 40%,transparent 100%)',marginLeft:'4px',boxShadow:'0 0 12px var(--accent-20)'}}></span>
         </Link>
         
-        <div className={`menu ${isMobileMenuOpen ? 'mobile-active' : ''}`}>
+        {windowWidth <= 768 && (
+          <button
+            className={`hamburger-menu${isMobileMenuOpen ? ' active' : ''}`}
+            onClick={toggleMenu}
+            aria-label="Toggle navigation menu"
+            style={{ marginLeft: 12, zIndex: 20 }}
+          >
+            <span className="hamburger-line"></span>
+            <span className="hamburger-line"></span>
+            <span className="hamburger-line"></span>
+          </button>
+        )}
+
+        <div
+          className={`menu${windowWidth > 768 ? '' : isMobileMenuOpen ? ' mobile-active' : ''}`}
+          style={
+            windowWidth > 768
+              ? {
+                  display: 'flex',
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  marginLeft: 'auto',
+                  position: 'static',
+                  background: 'none',
+                  width: 'auto',
+                  height: 'auto',
+                  boxShadow: 'none',
+                  padding: 0,
+                  zIndex: 99,
+                  transition: 'all 0.3s',
+                }
+              : {}
+          }
+        >
           <Link
             href="/"
             className={`menu-link hover-trigger ${pathname === '/' ? 'active' : ''}`}
@@ -167,16 +200,59 @@ export default function Navigation() {
           </Link>
         </div>
 
-        <button 
-          className={`hamburger-menu ${isMobileMenuOpen ? 'active' : ''}`}
-          onClick={toggleMenu}
-          aria-label="Toggle navigation menu"
-        >
-          <span className="hamburger-line"></span>
-          <span className="hamburger-line"></span>
-          <span className="hamburger-line"></span>
-          <span className="menu-label">MENU</span>
-        </button>
+        {isMobileMenuOpen && windowWidth <= 768 && (
+          <button
+            onClick={() => setIsMobileMenuOpen(false)}
+            aria-label="Close menu"
+            style={{
+              position: 'fixed',
+              top: 24,
+              right: 24,
+              zIndex: 120,
+              background: 'none',
+              border: 'none',
+              cursor: 'pointer',
+              width: 44,
+              height: 44,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              padding: 0,
+            }}
+          >
+            <span style={{
+              display: 'block',
+              width: 32,
+              height: 32,
+              position: 'relative',
+            }}>
+              <span style={{
+                position: 'absolute',
+                left: 0,
+                top: '50%',
+                width: '100%',
+                height: 4,
+                background: 'var(--accent)',
+                borderRadius: 2,
+                transform: 'rotate(45deg) translateY(-50%)',
+                boxShadow: '0 0 8px var(--accent-20)',
+                transition: 'all 0.3s',
+              }}></span>
+              <span style={{
+                position: 'absolute',
+                left: 0,
+                top: '50%',
+                width: '100%',
+                height: 4,
+                background: 'var(--accent)',
+                borderRadius: 2,
+                transform: 'rotate(-45deg) translateY(-50%)',
+                boxShadow: '0 0 8px var(--accent-20)',
+                transition: 'all 0.3s',
+              }}></span>
+            </span>
+          </button>
+        )}
 
         {isMobileMenuOpen && <div className="mobile-menu-overlay" onClick={() => setIsMobileMenuOpen(false)}></div>}
       </div>
