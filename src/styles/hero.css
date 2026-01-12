@@ -9,7 +9,7 @@
   padding: clamp(80px, 12vw, 120px) 5% 30px;
   position: relative;
   border-bottom: 1px solid var(--line);
-  background: linear-gradient(135deg, var(--bg-99) 0%, var(--surface-97) 50%, var(--bg-99) 100%);
+  background: #000;
   overflow: hidden;
 }
 
@@ -57,8 +57,8 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   text-shadow: 
-    0 8px 30px var(--shadow-dark-80),
-    0 0 50px var(--accent-12);
+    0 8px 30px rgba(21, 60, 120, 0.7),
+    0 0 50px rgba(33, 150, 243, 0.12);
   margin-bottom: 12px;
   transform: translate3d(0, 0, 0);
 }
@@ -84,7 +84,7 @@
   line-height: 1.5;
   max-width: 650px;
   margin: 0 auto 12px;
-  text-shadow: 0 4px 20px var(--shadow-dark-50);
+  text-shadow: 0 4px 20px rgba(21, 60, 120, 0.6);
   letter-spacing: 0.5px;
   will-change: transform, opacity;
 }
@@ -200,13 +200,13 @@
   border: 2px solid var(--accent-15);
   border-radius: 14px;
   margin-bottom: 15px;
-  box-shadow: 0 20px 60px var(--shadow-dark-80), inset 0 1px 0 var(--accent-10);
+  box-shadow: 0 20px 60px rgba(21, 60, 120, 0.7), inset 0 1px 0 rgba(33, 150, 243, 0.1);
   transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .portfolio-card:hover .card-content {
   border-color: var(--accent-40);
-  box-shadow: 0 30px 80px var(--accent-25), inset 0 1px 0 var(--accent-20);
+  box-shadow: 0 30px 80px rgba(21, 60, 120, 0.8), inset 0 1px 0 rgba(33, 150, 243, 0.2);
 }
 
 .card-overlay {
@@ -256,11 +256,11 @@
   letter-spacing: 0.8px;
   text-transform: uppercase;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(33, 150, 243, 0.2);
+  box-shadow: 0 4px 12px rgba(21, 60, 120, 0.35);
 }
 
 .portfolio-card:hover .card-category {
-  box-shadow: 0 6px 20px rgba(33, 150, 243, 0.4);
+  box-shadow: 0 6px 20px rgba(21, 60, 120, 0.5);
   transform: scale(1.05);
 }
 
