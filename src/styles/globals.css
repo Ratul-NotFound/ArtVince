@@ -2,31 +2,31 @@
 
 :root {
   /* Base Colors */
-  --bg: #080808;
-  --surface: #111;
-  --text: #ffffff;
-  --dim: #888;
-  --accent: #CCFF00;
-  --line: rgba(255, 255, 255, 0.1);
+  --bg: #0a1a2f;
+  --surface: #112d4e;
+  --text: #eaf6fb;
+  --dim: #7fb3d5;
+  --accent: #2196f3;
+  --line: rgba(33, 150, 243, 0.1);
   
   /* Accent Color Variants */
-  --accent-glow: rgba(204, 255, 0, 0.4);
-  --accent-02: rgba(204, 255, 0, 0.02);
-  --accent-03: rgba(204, 255, 0, 0.03);
-  --accent-04: rgba(204, 255, 0, 0.04);
-  --accent-05: rgba(204, 255, 0, 0.05);
-  --accent-06: rgba(204, 255, 0, 0.06);
-  --accent-08: rgba(204, 255, 0, 0.08);
-  --accent-10: rgba(204, 255, 0, 0.10);
-  --accent-12: rgba(204, 255, 0, 0.12);
-  --accent-15: rgba(204, 255, 0, 0.15);
-  --accent-20: rgba(204, 255, 0, 0.20);
-  --accent-30: rgba(204, 255, 0, 0.30);
-  --accent-40: rgba(204, 255, 0, 0.40);
-  --accent-50: rgba(204, 255, 0, 0.50);
-  --accent-60: rgba(204, 255, 0, 0.60);
-  --accent-80: rgba(204, 255, 0, 0.80);
-  --accent-90: rgba(204, 255, 0, 0.90);
+  --accent-glow: rgba(33, 150, 243, 0.4);
+  --accent-02: rgba(33, 150, 243, 0.02);
+  --accent-03: rgba(33, 150, 243, 0.03);
+  --accent-04: rgba(33, 150, 243, 0.04);
+  --accent-05: rgba(33, 150, 243, 0.05);
+  --accent-06: rgba(33, 150, 243, 0.06);
+  --accent-08: rgba(33, 150, 243, 0.08);
+  --accent-10: rgba(33, 150, 243, 0.10);
+  --accent-12: rgba(33, 150, 243, 0.12);
+  --accent-15: rgba(33, 150, 243, 0.15);
+  --accent-20: rgba(33, 150, 243, 0.20);
+  --accent-30: rgba(33, 150, 243, 0.30);
+  --accent-40: rgba(33, 150, 243, 0.40);
+  --accent-50: rgba(33, 150, 243, 0.50);
+  --accent-60: rgba(33, 150, 243, 0.60);
+  --accent-80: rgba(33, 150, 243, 0.80);
+  --accent-90: rgba(33, 150, 243, 0.90);
   
   /* Background Color Variants */
   --bg-80: rgba(8, 8, 8, 0.80);
@@ -64,15 +64,15 @@
   --shadow-dark-95: rgba(0, 0, 0, 0.95);
   
   /* Card & UI Colors */
-  --card-bg: #1a1a1a;
-  --card-bg-dark: #0a0a15;
-  --card-dark: rgba(20, 20, 20, 0.5);
-  --surface-dark: #0d0d0d;
+  --card-bg: #112d4e;
+  --card-bg-dark: #0a1a2f;
+  --card-dark: rgba(33, 150, 243, 0.08);
+  --surface-dark: #0a1a2f;
   
   /* Scrollbar Colors */
-  --scrollbar-track: #1a1a2e;
-  --scrollbar-thumb: #75c4f9;
-  --scrollbar-thumb-hover: #147ec7;
+  --scrollbar-track: #112d4e;
+  --scrollbar-thumb: #2196f3;
+  --scrollbar-thumb-hover: #1565c0;
   
   /* Fonts */
   --font-head: 'Syncopate', sans-serif;
@@ -131,7 +131,7 @@ input, textarea {
 input:focus, textarea:focus {
   outline: none;
   border-color: var(--accent);
-  box-shadow: 0 0 20px rgba(204, 255, 0, 0.2);
+  box-shadow: 0 0 20px rgba(33, 150, 243, 0.2);
 }
 
 /* --- SMOOTH SCROLL --- */
