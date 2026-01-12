@@ -51,7 +51,7 @@
 
 .mission-section {
   padding: clamp(40px, 10vw, 80px) 5%;
-  background: linear-gradient(135deg, rgba(204, 255, 0, 0.02) 0%, rgba(204, 255, 0, 0) 100%);
+  background: linear-gradient(135deg, var(--accent-02) 0%, var(--accent-00) 100%);
     background: linear-gradient(135deg, rgba(33, 150, 243, 0.02) 0%, rgba(33, 150, 243, 0) 100%);
   border-bottom: 1px solid var(--line);
 }
@@ -124,7 +124,7 @@
   content: '';
   position: absolute;
   inset: -2px;
-  background: conic-gradient(from 45deg, var(--accent), rgba(204, 255, 0, 0), var(--accent));
+  background: conic-gradient(from 45deg, var(--accent), var(--accent-00), var(--accent));
   opacity: 0;
   z-index: -1;
   transition: opacity 0.4s ease;
@@ -138,7 +138,7 @@
 
 .value-item:hover {
   border-color: var(--accent);
-  box-shadow: 0 15px 50px rgba(204, 255, 0, 0.15);
+  box-shadow: 0 15px 50px var(--accent-15);
     box-shadow: 0 15px 50px rgba(33, 150, 243, 0.15);
   transform: translateY(-8px);
 }
@@ -450,7 +450,7 @@
 
 .careers-btn {
   padding: 14px 40px;
-  background: linear-gradient(90deg, var(--accent) 0%, rgba(204, 255, 0, 0.8) 100%);
+  background: linear-gradient(90deg, var(--accent) 0%, var(--accent-80) 100%);
   border: none;
   color: var(--bg);
   font-weight: 700;
@@ -481,7 +481,7 @@
 
 .careers-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 35px rgba(204, 255, 0, 0.35);
+  box-shadow: 0 12px 35px var(--accent-35);
   text-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
 }
 
@@ -597,7 +597,7 @@
 .form-group textarea:focus {
   outline: none;
   border-color: var(--accent);
-  box-shadow: 0 0 12px rgba(204, 255, 0, 0.2), inset 0 0 8px rgba(204, 255, 0, 0.05);
+  box-shadow: 0 0 12px var(--accent-20), inset 0 0 8px var(--accent-05);
 }
 
 .form-group textarea {
@@ -623,14 +623,14 @@
 
 .submit-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(204, 255, 0, 0.3);
+  box-shadow: 0 10px 30px var(--accent-30);
 }
 
 /* === TEAM SECTION === */
 
 .team-section {
   padding: clamp(40px, 10vw, 80px) 5%;
-  background: linear-gradient(135deg, rgba(204, 255, 0, 0.03) 0%, rgba(204, 255, 0, 0) 100%);
+  background: linear-gradient(135deg, var(--accent-03) 0%, var(--accent-00) 100%);
   border-top: 1px solid var(--line);
 }
 
@@ -661,14 +661,14 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 50% 0%, rgba(204, 255, 0, 0.08), transparent 70%);
+  background: radial-gradient(circle at 50% 0%, var(--accent-08), transparent 70%);
   opacity: 0;
   transition: opacity 0.4s ease;
 }
 
 .team-card:hover {
   border-color: var(--accent);
-  box-shadow: 0 10px 40px rgba(204, 255, 0, 0.1), inset 0 0 20px rgba(204, 255, 0, 0.03);
+  box-shadow: 0 10px 40px var(--accent-10), inset 0 0 20px var(--accent-03);
   transform: translateY(-8px);
 }
 
@@ -697,7 +697,7 @@
 
 .team-card:hover .team-image {
   border-color: var(--accent);
-  box-shadow: 0 0 20px rgba(204, 255, 0, 0.2);
+  box-shadow: 0 0 20px var(--accent-20);
 }
 
 .team-card:hover .team-image img {
@@ -709,7 +709,7 @@
   width: 120px;
   height: 120px;
   margin: 0 auto 20px;
-  background: linear-gradient(135deg, var(--accent) 0%, rgba(204, 255, 0, 0.5) 100%);
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-50) 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -771,7 +771,7 @@
 
 .blog-card:hover {
   border-color: var(--accent);
-  box-shadow: 0 10px 40px rgba(204, 255, 0, 0.1);
+  box-shadow: 0 10px 40px var(--accent-10);
   transform: translateY(-5px);
 }
 
