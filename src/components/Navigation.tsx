@@ -107,13 +107,11 @@ export default function Navigation() {
     <nav className={`nav ${isScrolled ? 'scrolled' : ''}`}>
       <div className="nav-bg-effect"></div>
       <div className="nav-container">
-        <Link href="/" className="brand hover-trigger">
-          <span className="brand-text">ARTVINCE</span>
-          <span className="brand-dot">.</span>
-          <span className="brand-studio">STUDIO</span>
-          <div className="brand-glow">
-            <div className="line-middle"></div>
-          </div>
+        <Link href="/" className="brand hover-trigger" style={{display:'flex',alignItems:'center',gap:'10px',textDecoration:'none'}}>
+          <img src="/images/fabicon.png" alt="Artvince Logo" style={{height:'32px',width:'32px',borderRadius:'8px',boxShadow:'0 0 8px var(--accent-20)'}} />
+          <span className="brand-text" style={{textDecoration:'none',borderBottom:'none',fontWeight:700,letterSpacing:'2px'}}>ARTVINCE</span>
+          {/* Professional accent glow effect */}
+          <span style={{display:'inline-block',width:'10px',height:'10px',borderRadius:'50%',background:'radial-gradient(circle,var(--accent-20) 40%,transparent 100%)',marginLeft:'4px',boxShadow:'0 0 12px var(--accent-20)'}}></span>
         </Link>
         
         <div className={`menu ${isMobileMenuOpen ? 'mobile-active' : ''}`}>
