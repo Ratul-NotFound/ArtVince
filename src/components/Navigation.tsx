@@ -10,10 +10,11 @@ export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [windowWidth, setWindowWidth] = useState(0)
+  const [theme, setTheme] = useState('dark')
 
   useEffect(() => {
     setWindowWidth(window.innerWidth)
-    
+
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
     }
@@ -32,15 +33,19 @@ export default function Navigation() {
       document.body.style.overflow = 'unset'
     }
 
+    // Theme switching
+    document.body.classList.remove('theme-dark', 'theme-light')
+    document.body.classList.add(theme === 'dark' ? 'theme-dark' : 'theme-light')
+
     window.addEventListener('scroll', handleScroll)
     window.addEventListener('resize', handleResize)
-    
+
     return () => {
       window.removeEventListener('scroll', handleScroll)
       window.removeEventListener('resize', handleResize)
       document.body.style.overflow = 'unset'
     }
-  }, [isMobileMenuOpen])
+  }, [isMobileMenuOpen, theme])
 
   useEffect(() => {
     const handleLinkClick = () => {
@@ -113,6 +118,81 @@ export default function Navigation() {
           {/* Professional accent glow effect */}
           <span style={{display:'inline-block',width:'10px',height:'10px',borderRadius:'50%',background:'radial-gradient(circle,var(--accent-20) 40%,transparent 100%)',marginLeft:'4px',boxShadow:'0 0 12px var(--accent-20)'}}></span>
         </Link>
+        {/* Spacer to push theme switch right */}
+        <div style={{ flex: 1 }}></div>
+        {/* Professional Theme Switch Toggle */}
+        <button
+          onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+          className="theme-toggle-btn"
+          aria-label="Toggle theme"
+        >
+          <span className={`theme-toggle-thumb ${theme}`}></span>
+          <span className="theme-toggle-icon">
+            {theme === 'dark' ? (
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="11" cy="11" r="7" fill="#222" stroke="#2196f3" strokeWidth="2" />
+                <path d="M11 3V1M11 21V19M4.22 4.22L2.81 2.81M19.19 19.19L17.78 17.78M3 11H1M21 11H19M4.22 17.78L2.81 19.19M19.19 2.81L17.78 4.22" stroke="#2196f3" strokeWidth="1.5" strokeLinecap="round"/>
+              </svg>
+            ) : (
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="11" cy="11" r="7" fill="#fff" stroke="#2196f3" strokeWidth="2" />
+                <path d="M16 11A5 5 0 0 1 11 16" stroke="#2196f3" strokeWidth="1.5" strokeLinecap="round"/>
+              </svg>
+            )}
+          </span>
+        </button>
+       
+        <style jsx global>{`
+          .theme-toggle-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            background: var(--accent-08);
+            border: 2px solid var(--accent);
+            border-radius: 50%;
+            cursor: pointer;
+            position: relative;
+            margin-left: 24px;
+            transition: background 0.3s, border 0.3s;
+            box-shadow: 0 2px 12px var(--accent-10);
+            z-index: 40;
+          }
+          .theme-toggle-btn:hover {
+            background: var(--accent-15);
+            border-color: var(--accent);
+          }
+          .theme-toggle-thumb {
+            position: absolute;
+            left: 8px;
+            top: 8px;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent-10), var(--accent-30));
+            box-shadow: 0 0 8px var(--accent-20);
+            transition: background 0.3s, box-shadow 0.3s;
+            z-index: 1;
+          }
+          .theme-toggle-thumb.light {
+            background: linear-gradient(135deg, #fff 60%, var(--accent-10));
+            box-shadow: 0 0 12px #fff;
+          }
+          .theme-toggle-thumb.dark {
+            background: linear-gradient(135deg, #222 60%, var(--accent-20));
+            box-shadow: 0 0 12px #2196f3;
+          }
+          .theme-toggle-icon {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 22px;
+            height: 22px;
+          }
+        `}</style>
         
         {windowWidth <= 768 && (
           <button

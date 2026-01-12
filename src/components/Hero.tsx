@@ -44,7 +44,7 @@ export default function Hero() {
           scale = 1
           zIndex = 50
           rotateY = 0
-          filter = 'brightness(1) blur(0px) drop-shadow(0 15px 30px rgba(204, 255, 0, 0.1))'
+          filter = 'brightness(1) blur(0px) drop-shadow(0 15px 30px rgba(9, 18, 70, 0.1))'
         } else if (distance === 1) {
           x = 200
           y = 0
@@ -164,31 +164,48 @@ export default function Hero() {
     )
   }, [isLoaded])
 
-  // Parallax effect on mouse move
+  // Parallax effect on mouse move (throttled with requestAnimationFrame)
   useEffect(() => {
+    let ticking = false
+    let lastX = 0
+    let lastY = 0
     const handleMouseMove = (e: MouseEvent) => {
-      setMousePos({ x: e.clientX, y: e.clientY })
-
-      if (introRef.current) {
-        const rect = introRef.current.getBoundingClientRect()
-        const centerX = rect.width / 2
-        const centerY = rect.height / 2
-        const x = (e.clientX - rect.left - centerX) * 0.02
-        const y = (e.clientY - rect.top - centerY) * 0.02
-
-        gsap.to(introRef.current, {
-          rotateX: y,
-          rotateY: x,
-          transformPerspective: 1000,
-          duration: 0.5,
-          ease: 'power2.out',
-          overwrite: 'auto',
+      lastX = e.clientX
+      lastY = e.clientY
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          if (introRef.current) {
+            const rect = introRef.current.getBoundingClientRect()
+            const centerX = rect.width / 2
+            const centerY = rect.height / 2
+            const x = (lastX - rect.left - centerX) * 0.02
+            const y = (lastY - rect.top - centerY) * 0.02
+            gsap.to(introRef.current, {
+              rotateX: y,
+              rotateY: x,
+              transformPerspective: 1000,
+              duration: 0.5,
+              ease: 'power2.out',
+              overwrite: 'auto',
+            })
+          }
+          ticking = false
         })
+        ticking = true
       }
     }
-
-    window.addEventListener('mousemove', handleMouseMove)
-    return () => window.removeEventListener('mousemove', handleMouseMove)
+    // Only attach when hovering hero-intro
+    const intro = introRef.current
+    if (!intro) return
+    intro.addEventListener('mouseenter', () => window.addEventListener('mousemove', handleMouseMove))
+    intro.addEventListener('mouseleave', () => window.removeEventListener('mousemove', handleMouseMove))
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove)
+      if (intro) {
+        intro.removeEventListener('mouseenter', () => window.addEventListener('mousemove', handleMouseMove))
+        intro.removeEventListener('mouseleave', () => window.removeEventListener('mousemove', handleMouseMove))
+      }
+    }
   }, [])
 
   useEffect(() => {

@@ -99,6 +99,99 @@ html, body {
   height: auto;
   overflow-y: auto;
 }
+ 
+body.theme-dark {
+  background: #080808;
+  color: #fff;
+}
+
+body.theme-light {
+  --bg: linear-gradient(135deg, #fff 70%, #eaf1fb 100%);
+  --text: #111827;
+  --accent: #1976d2;
+  --accent-08: rgba(25, 118, 210, 0.08);
+  --accent-10: rgba(25, 118, 210, 0.10);
+  --accent-12: rgba(25, 118, 210, 0.12);
+  --accent-15: rgba(25, 118, 210, 0.15);
+  --accent-20: rgba(25, 118, 210, 0.20);
+  --accent-25: #60a5fa;
+  --accent-30: #2196f3;
+  --accent-40: #1976d2;
+  --accent-60: #1565c0;
+  --accent-05: #f1f5f9;
+  --accent-04: #f3f6fb;
+  --accent-03: #f8fafc;
+  --accent-02: #f9fafb;
+  --accent-01: #ffffff;
+  --line: #c7d7ee;
+  --dim: #4b5c7a;
+  background: var(--bg);
+  color: var(--text);
+}
+
+body.theme-light .nav,
+body.theme-light .nav-bg-effect,
+body.theme-light .footer {
+  background: linear-gradient(90deg, #fff 80%, #eaf1fb 100%) !important;
+  color: var(--text) !important;
+  border-bottom: 1.5px solid var(--line) !important;
+  box-shadow: 0 4px 32px 0 rgba(25, 118, 210, 0.08);
+  backdrop-filter: blur(8px);
+}
+
+body.theme-light .card,
+body.theme-light .card,
+body.theme-light .card-inner {
+  background: linear-gradient(120deg, #fff 85%, #e3f0ff 100%) !important;
+  color: #10213a !important;
+  border: 1.5px solid #d0e3fa !important;
+  box-shadow: 0 8px 48px 0 rgba(25, 118, 210, 0.13);
+  border-radius: 22px !important;
+  overflow: hidden;
+}
+
+body.theme-light .card-info {
+  background: linear-gradient(180deg, #fafdff 90%, #e3f0ff 100%) !important;
+  color: #1a2a3a !important;
+  border-top: 1.5px solid #d0e3fa !important;
+  box-shadow: 0 -2px 32px 0 rgba(25, 118, 210, 0.10);
+  border-radius: 0 0 20px 20px !important;
+}
+
+body.theme-light .menu-link {
+  color: var(--text) !important;
+  background: linear-gradient(90deg, #fff 90%, #eaf1fb 100%) !important;
+  border-left: 3px solid var(--accent-10) !important;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 1px 0 0 var(--line);
+  border-radius: 10px;
+  margin: 2px 0;
+  transition: background 0.2s, color 0.2s;
+}
+
+body.theme-light .menu-link.active,
+body.theme-light .menu-link:hover {
+  color: var(--accent-40) !important;
+  background: linear-gradient(90deg, #eaf1fb 80%, #dbeafe 100%) !important;
+  border-left: 3px solid var(--accent-40) !important;
+  box-shadow: 0 4px 24px 0 rgba(25, 118, 210, 0.10);
+}
+
+body.theme-light .service-badge {
+  background: linear-gradient(135deg, #e3f0ff 60%, #fff 100%) !important;
+  color: #1976d2 !important;
+  border: 2px solid #b3d1f7 !important;
+  box-shadow: 0 2px 20px 0 rgba(25, 118, 210, 0.15);
+  font-weight: 700;
+}
+
+body.theme-light .card-title {
+  color: #0a1a2f !important;
+  text-shadow: 0 2px 12px #e3eafc;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
 
 /* --- BACKGROUND FX --- */
 
