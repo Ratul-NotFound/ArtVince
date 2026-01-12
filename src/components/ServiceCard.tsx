@@ -1,6 +1,7 @@
 'use client'
 
 import { useRef, useEffect } from 'react'
+import { motion } from 'framer-motion'
 import gsap from 'gsap'
 
 interface ServiceCardProps {
@@ -18,7 +19,7 @@ export default function ServiceCard({ title, description, index }: ServiceCardPr
     '3D PRODUCT ANIMATION': `/images/hero/${heroImages[0]}`,
     '3D INDUSTRIAL DESIGN': `/images/hero/${heroImages[1]}`,
     'CHARACTER MODELING': `/images/hero/${heroImages[2]}`,
-    'LOW-POLY GAME ASSETS': `/images/hero/${heroImages[3]}`,
+    'LOW-POLY GAME ASSETS': `/images/hero/gun_1.jpeg`,
     'GAME ENVIRONMENT DESIGN': `/images/hero/${heroImages[4]}`,
     'CONCEPT ART & MORE': `/images/hero/char_5.jpg`,
   }
@@ -73,7 +74,14 @@ export default function ServiceCard({ title, description, index }: ServiceCardPr
   }, [index])
 
   return (
-    <div className="card hover-trigger" ref={cardRef} style={{ animationDelay: `${index * 0.1}s` }}>
+    <motion.div
+      className="card futuristic-card hover-trigger"
+      ref={cardRef}
+      style={{ animationDelay: `${index * 0.1}s` }}
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.7, delay: index * 0.1, type: 'spring' }}
+    >
       <div className="card-inner">
         <div className="card-border"></div>
         <div className="service-glow"></div>
@@ -81,7 +89,7 @@ export default function ServiceCard({ title, description, index }: ServiceCardPr
           style={{
             width: '100%',
             height: '100%',
-            background: `linear-gradient(135deg, rgba(10, 10, 21, 0.95) 0%, rgba(10, 10, 21, 0.8) 50%, rgba(204, 255, 0, 0.03) 100%), url('${imagePath}')`,
+               background: `linear-gradient(135deg, rgba(10, 10, 21, 0.6) 0%, rgba(10, 10, 21, 0.3) 50%, rgba(204, 255, 0, 0.03) 100%), url('${imagePath}')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             position: 'absolute',
@@ -96,6 +104,6 @@ export default function ServiceCard({ title, description, index }: ServiceCardPr
           <div className="service-accent-line"></div>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
