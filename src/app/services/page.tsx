@@ -1,9 +1,34 @@
 'use client'
 
+
+import { useEffect } from 'react'
+import gsap from 'gsap'
 import { Navigation, ServiceCard, Footer } from '@/components'
 import { servicesData } from '@/lib/DataFactory'
 
+
 export default function ServicesPage() {
+  useEffect(() => {
+    // Card Reveal on Scroll
+    const cards = document.querySelectorAll('.card')
+    cards.forEach((card) => {
+      const observer = new window.IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setTimeout(() => {
+                card.classList.add('revealed')
+              }, 100)
+              observer.unobserve(card)
+            }
+          })
+        },
+        { threshold: 0.1 }
+      )
+      observer.observe(card)
+    })
+  }, [])
+
   return (
     <div className="overflow-hidden">
       <Navigation />
