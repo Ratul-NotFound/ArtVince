@@ -10,28 +10,28 @@
 }
 
 .nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  padding: clamp(12px, 2vw, 16px) clamp(16px, 4%, 40px);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1000;
-  background: linear-gradient(180deg, rgba(8, 8, 8, 0.4) 0%, rgba(8, 8, 8, 0.2) 100%);
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
-  border-bottom: 1px solid rgba(33, 150, 243, 0.06);
-  border-top: none;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
-  overflow: visible;
-  gap: clamp(10px, 2vw, 30px);
-  min-height: auto;
-  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-  visibility: visible;
-  pointer-events: auto;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  padding: clamp(12px, 2vw, 16px) clamp(16px, 4%, 40px) !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  z-index: 1000 !important;
+  background: linear-gradient(180deg, rgba(8, 8, 8, 0.4) 0%, rgba(8, 8, 8, 0.2) 100%) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border-bottom: 1px solid rgba(33, 150, 243, 0.06) !important;
+  border-top: none !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15) !important;
+  overflow: visible !important;
+  gap: clamp(10px, 2vw, 30px) !important;
+  min-height: auto !important;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
 }
 
 .nav::before {
@@ -48,101 +48,62 @@
 }
 
 .nav-bg-effect {
-  display: none;
+  display: none !important;
 }
 
 .nav.scrolled {
-  padding: clamp(12px, 2vw, 16px) clamp(16px, 4%, 40px);
-  background: linear-gradient(180deg, rgba(8, 8, 8, 0.7) 0%, rgba(8, 8, 8, 0.5) 100%);
-  border-bottom: 1px solid rgba(33, 150, 243, 0.1);
-  border-top: none;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-  min-height: auto;
+  padding: clamp(12px, 2vw, 16px) clamp(16px, 4%, 40px) !important;
+  background: linear-gradient(180deg, rgba(8, 8, 8, 0.7) 0%, rgba(8, 8, 8, 0.5) 100%) !important;
+  border-bottom: 1px solid rgba(33, 150, 243, 0.1) !important;
+  border-top: none !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25) !important;
+  min-height: auto !important;
 }
 
 .nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: clamp(6px, 1.5vw, 10px) 0 0 0;
-  position: relative;
-  z-index: 1;
-  gap: clamp(10px, 2vw, 30px);
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  width: 100% !important;
+  max-width: 1400px !important;
+  margin: 0 auto !important;
+  padding: clamp(6px, 1.5vw, 10px) 0 0 0 !important;
+  position: relative !important;
+  z-index: 1 !important;
+  gap: clamp(10px, 2vw, 30px) !important;
+  background: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
 }
 
 .brand {
-  font-family: var(--font-ui);
-  font-size: clamp(18px, 2.8vw, 24px);
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: var(--text);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: flex;
-  gap: clamp(3px, 0.8vw, 6px);
-  align-items: center;
-  align-items: baseline;
-  position: relative;
-  white-space: nowrap;
-  min-width: fit-content;
-  flex-shrink: 0;
+  font-family: var(--font-ui) !important;
+  font-size: clamp(18px, 2.8vw, 24px) !important;
+  font-weight: 700 !important;
+  letter-spacing: 1px !important;
+  text-transform: uppercase !important;
+  color: var(--text) !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  display: flex !important;
+  gap: clamp(3px, 0.8vw, 6px) !important;
+  align-items: baseline !important;
+  position: relative !important;
+  white-space: nowrap !important;
+  min-width: fit-content !important;
+  flex-shrink: 0 !important;
+  background: none !important;
+  text-shadow: none !important;
 }
 
 .brand:hover {
-  color: var(--accent);
-  transition: color 0.3s ease;
+  color: var(--accent) !important;
+  transition: color 0.3s ease !important;
 }
 
-.brand-glow {
-  position: absolute;
-  top: -20px;
-  left: -20px;
-  right: -20px;
-  height: 65px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.brand-glow::before,
-.brand-glow::after {
-  content: '';
-  display: block;
-  height: 1px;
-  width: 70%;
-  background: var(--accent);
-  border-radius: 0.5px;
-  transform: scaleX(0);
-  transform-origin: center;
-  transition: all 0.4s ease;
-  box-shadow: none;
-}
-
-.brand-glow .line-middle {
-  height: 1px;
-  width: 70%;
-  background: var(--accent);
-  border-radius: 0.5px;
-  transform: scaleX(0);
-  transform-origin: center;
-  transition: all 0.4s ease;
-  box-shadow: none;
-}
-
-.brand:hover .brand-glow::before,
-.brand:hover .brand-glow::after {
-  transform: scaleX(1);
-}
-
-.brand:hover .brand-glow .line-middle {
-  transform: scaleX(1);
+.brand-text {
+  font-size: 1em !important;
+  text-shadow: none !important;
 }
 
 .brand-glow {
@@ -205,28 +166,38 @@
 }
 
 .menu {
-  display: flex;
-  gap: clamp(20px, 3vw, 45px);
-  align-items: center;
-  position: relative;
+  display: flex !important;
+  gap: clamp(20px, 3vw, 45px) !important;
+  align-items: center !important;
+  position: relative !important;
+  background: none !important;
+  box-shadow: none !important;
 }
 
 .menu-link {
-  color: var(--text-80);
-  text-decoration: none;
-  font-size: clamp(11px, 1.2vw, 13px);
-  font-family: var(--font-ui);
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
-  position: relative;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0;
-  white-space: nowrap;
-  padding: clamp(8px, 1.2vw, 12px) 0;
+  color: var(--text-80) !important;
+  text-decoration: none !important;
+  font-size: clamp(11px, 1.2vw, 13px) !important;
+  font-family: var(--font-ui) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.8px !important;
+  position: relative !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  display: inline-flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 0 !important;
+  white-space: nowrap !important;
+  padding: clamp(8px, 1.2vw, 12px) 0 !important;
+  background: none !important;
+  border: none !important;
+  border-left: none !important;
+  border-radius: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+  font-weight: 400 !important;
+  text-shadow: none !important;
 }
 
 .menu-link::before {
@@ -242,7 +213,14 @@
 }
 
 .menu-link:hover {
-  color: var(--accent);
+  color: var(--accent) !important;
+  text-shadow: 0 0 12px var(--accent-60) !important;
+  transform: translateY(-2px) !important;
+  background: none !important;
+  border: none !important;
+  border-left: none !important;
+  box-shadow: none !important;
+  padding: clamp(8px, 1.2vw, 12px) 0 !important;
 }
 
 .menu-link:hover::before {
@@ -250,7 +228,13 @@
 }
 
 .menu-link.active {
-  color: #2196f3;
+  color: var(--accent) !important;
+  text-shadow: 0 0 15px var(--accent-60) !important;
+  background: none !important;
+  border: none !important;
+  border-left: none !important;
+  box-shadow: none !important;
+  padding: clamp(8px, 1.2vw, 12px) 0 !important;
 }
 
 .menu-link.active::before {
@@ -258,7 +242,7 @@
 }
 
 .link-bg {
-  display: none;
+  display: none !important;
 }
 
 .link-text {
@@ -267,55 +251,25 @@
 }
 
 .link-underline {
-  display: none;
+  display: none !important;
   box-shadow: 0 0 0 var(--accent-40);
-}
-
-.menu-link:hover {
-  color: #2196f3;
-  text-shadow: 0 0 12px var(--accent-60);
-  transform: translateY(-2px);
-}
-
-.menu-link:hover .link-bg {
-  opacity: 1;
-  transform: scaleX(1.1);
-}
-
-.menu-link:hover .link-underline {
-  width: 100%;
-  box-shadow: 0 0 12px var(--accent-50);
-}
-
-.menu-link.active {
-  color: var(--accent);
-  text-shadow: 0 0 15px var(--accent-60);
-}
-
-.menu-link.active .link-bg {
-  opacity: 1;
-}
-
-.menu-link.active .link-underline {
-  width: 100%;
-  box-shadow: 0 0 15px var(--accent-60);
 }
 
 .hamburger-menu {
   display: none;
   flex-direction: column;
   gap: 5px;
-  background: transparent;
-  border: 1.5px solid var(--text-60);
-  border-radius: 4px;
-  padding: 8px 10px;
+  background: transparent !important;
+  border: 1.5px solid var(--text-60) !important;
+  border-radius: 4px !important;
+  padding: 8px 10px !important;
   cursor: pointer;
   transition: all 0.3s ease;
   min-width: fit-content;
   flex-shrink: 0;
   position: relative;
   overflow: hidden;
-  box-shadow: none;
+  box-shadow: none !important;
 }
 
 .hamburger-menu::before {
@@ -327,20 +281,20 @@
 }
 
 .hamburger-menu:hover {
-  background: rgba(33, 150, 243, 0.08);
-  border-color: var(--accent);
-  box-shadow: none;
+  background: var(--accent-08) !important;
+  border-color: var(--accent) !important;
+  box-shadow: none !important;
   transform: none;
 }
 
 .hamburger-menu:hover .hamburger-line {
-  background: #2196f3;
+  background: var(--accent) !important;
 }
 
 .hamburger-line {
   width: 18px;
   height: 1.5px;
-  background: #2196f3;
+  background: var(--accent) !important;
   border-radius: 0;
   transition: all 0.3s ease;
   box-shadow: none;
@@ -354,7 +308,7 @@
 
 .hamburger-menu.active .hamburger-line:nth-child(1) {
   transform: rotate(45deg) translateY(10px);
-  background: var(--accent);
+  background: var(--accent) !important;
 }
 
 .hamburger-menu.active .hamburger-line:nth-child(2) {
@@ -364,12 +318,7 @@
 
 .hamburger-menu.active .hamburger-line:nth-child(3) {
   transform: rotate(-45deg) translateY(-10px);
-  background: var(--accent);
-}
-
-.hamburger-menu.active .hamburger-line:nth-child(3) {
-  transform: rotate(-45deg) translateY(clamp(-8px, -1.5vw, -12px));
-  width: clamp(18px, 3.8vw, 24px);
+  background: var(--accent) !important;
   box-shadow: 0 0 10px var(--accent);
 }
 
@@ -377,73 +326,201 @@
   box-shadow: 0 0 8px var(--accent-20);
 }
 
+/* === LIGHT MODE - COLORS ONLY === */
+body.theme-light .nav {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.2) 100%) !important;
+  border-bottom: 1px solid rgba(33, 150, 243, 0.06) !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+body.theme-light .nav.scrolled {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.5) 100%) !important;
+  border-bottom: 1px solid rgba(33, 150, 243, 0.1) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25) !important;
+}
+
+body.theme-light .nav-container {
+  background: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding: clamp(6px, 1.5vw, 10px) 0 0 0 !important;
+}
+
+body.theme-light .brand {
+  color: var(--text) !important;
+  background: none !important;
+  font-weight: 700 !important;
+  letter-spacing: 1px !important;
+  text-shadow: none !important;
+}
+
+body.theme-light .brand-text {
+  color: var(--text) !important;
+  text-shadow: none !important;
+  font-size: 1em !important;
+}
+
+body.theme-light .brand:hover {
+  color: var(--accent) !important;
+}
+
+body.theme-light .menu {
+  background: none !important;
+  box-shadow: none !important;
+}
+
+body.theme-light .menu-link {
+  color: var(--text-80) !important;
+  background: none !important;
+  border: none !important;
+  border-left: none !important;
+  border-radius: 0 !important;
+  margin: 0 !important;
+  padding: clamp(8px, 1.2vw, 12px) 0 !important;
+  font-size: clamp(11px, 1.2vw, 13px) !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.8px !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  transition: all 0.3s ease !important;
+}
+
+body.theme-light .menu-link::before {
+  background: var(--accent) !important;
+}
+
+body.theme-light .menu-link:hover {
+  color: var(--accent) !important;
+  text-shadow: 0 0 12px var(--accent-60) !important;
+  background: none !important;
+  border: none !important;
+  border-left: none !important;
+  box-shadow: none !important;
+  padding: clamp(8px, 1.2vw, 12px) 0 !important;
+}
+
+body.theme-light .menu-link.active {
+  color: var(--accent) !important;
+  text-shadow: 0 0 15px var(--accent-60) !important;
+  background: none !important;
+  border: none !important;
+  border-left: none !important;
+  box-shadow: none !important;
+  padding: clamp(8px, 1.2vw, 12px) 0 !important;
+}
+
+body.theme-light .hamburger-menu {
+  background: transparent !important;
+  border: 1.5px solid var(--text-60) !important;
+  box-shadow: none !important;
+  border-radius: 4px !important;
+  padding: 8px 10px !important;
+}
+
+body.theme-light .hamburger-menu:hover {
+  background: var(--accent-08) !important;
+  border-color: var(--accent) !important;
+  box-shadow: none !important;
+}
+
+body.theme-light .hamburger-line {
+  background: var(--accent) !important;
+}
+
+body.theme-light .hamburger-menu:hover .hamburger-line {
+  background: var(--accent) !important;
+}
+
+body.theme-light .hamburger-menu.active .hamburger-line:nth-child(1),
+body.theme-light .hamburger-menu.active .hamburger-line:nth-child(3) {
+  background: var(--accent) !important;
+}
+
 /* --- RESPONSIVE DESIGN --- */
 @media (max-width: 1200px) {
   .nav {
-    padding: clamp(10px, 2.5vw, 20px) clamp(16px, 4%, 4%);
+    padding: clamp(10px, 2.5vw, 20px) clamp(16px, 4%, 4%) !important;
   }
   
   .nav-container {
-    gap: clamp(10px, 1.5vw, 20px);
+    gap: clamp(10px, 1.5vw, 20px) !important;
   }
   
   .brand {
-    font-size: clamp(14px, 3vw, 20px);
+    font-size: clamp(14px, 3vw, 20px) !important;
   }
   
   .menu {
-    gap: clamp(15px, 2.5vw, 25px);
+    gap: clamp(15px, 2.5vw, 25px) !important;
   }
   
   .menu-link {
-    font-size: clamp(10px, 1.2vw, 12px);
-    padding: clamp(6px, 0.8vw, 10px);
+    font-size: clamp(10px, 1.2vw, 12px) !important;
+    padding: clamp(6px, 0.8vw, 10px) 0 !important;
+  }
+
+  body.theme-light .menu-link {
+    padding: clamp(6px, 0.8vw, 10px) 0 !important;
+  }
+
+  body.theme-light .menu-link:hover,
+  body.theme-light .menu-link.active {
+    padding: clamp(6px, 0.8vw, 10px) 0 !important;
   }
 }
 
 @media (max-width: 1024px) {
   .nav {
-    padding: clamp(10px, 2vw, 18px) clamp(16px, 4%, 4%);
+    padding: clamp(10px, 2vw, 18px) clamp(16px, 4%, 4%) !important;
   }
   
   .brand {
-    font-size: clamp(14px, 2.8vw, 20px);
+    font-size: clamp(14px, 2.8vw, 20px) !important;
   }
   
   .menu {
-    gap: clamp(15px, 2.2vw, 20px);
+    gap: clamp(15px, 2.2vw, 20px) !important;
   }
   
   .menu-link {
-    font-size: clamp(10px, 1.1vw, 11px);
-    padding: clamp(6px, 0.7vw, 8px);
+    font-size: clamp(10px, 1.1vw, 11px) !important;
+    padding: clamp(6px, 0.7vw, 8px) 0 !important;
+  }
+
+  body.theme-light .menu-link {
+    padding: clamp(6px, 0.7vw, 8px) 0 !important;
+  }
+
+  body.theme-light .menu-link:hover,
+  body.theme-light .menu-link.active {
+    padding: clamp(6px, 0.7vw, 8px) 0 !important;
   }
 }
 
 @media (max-width: 768px) {
   .nav {
-    padding: clamp(14px, 3vw, 18px) clamp(12px, 3%, 3%);
-    gap: clamp(10px, 2vw, 16px);
-    min-height: clamp(64px, 14vh, 90px);
+    padding: clamp(14px, 3vw, 18px) clamp(12px, 3%, 3%) !important;
+    gap: clamp(10px, 2vw, 16px) !important;
+    min-height: clamp(64px, 14vh, 90px) !important;
   }
   
   .nav-container {
-    gap: clamp(10px, 2vw, 16px);
-    align-items: center;
+    gap: clamp(10px, 2vw, 16px) !important;
+    align-items: center !important;
   }
 
   .brand {
-    font-size: clamp(13px, 3vw, 17px);
-    letter-spacing: 0.8px;
-    gap: clamp(2px, 0.5vw, 4px);
-    flex-shrink: 0;
-    min-width: fit-content;
-    display: flex;
-    align-items: center;
+    font-size: clamp(13px, 3vw, 17px) !important;
+    letter-spacing: 0.8px !important;
+    gap: clamp(2px, 0.5vw, 4px) !important;
+    flex-shrink: 0 !important;
+    min-width: fit-content !important;
+    display: flex !important;
+    align-items: center !important;
   }
 
   .brand-studio {
-    font-size: clamp(8px, 2vw, 11px);
+    font-size: clamp(8px, 2vw, 11px) !important;
   }
 
   .brand-glow {
@@ -454,20 +531,20 @@
   }
 
   .hamburger-menu {
-    display: flex;
-    width: auto;
-    height: auto;
-    gap: 6px;
-    padding: 10px 12px;
-    flex-shrink: 0;
-    background: var(--accent-08);
-    border: 1.5px solid var(--accent);
-    border-radius: 6px;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-    touch-action: manipulation;
+    display: flex !important;
+    width: auto !important;
+    height: auto !important;
+    gap: 6px !important;
+    padding: 10px 12px !important;
+    flex-shrink: 0 !important;
+    background: var(--accent-08) !important;
+    border: 1.5px solid var(--accent) !important;
+    border-radius: 6px !important;
+    position: relative !important;
+    overflow: hidden !important;
+    cursor: pointer !important;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+    touch-action: manipulation !important;
   }
 
   .hamburger-menu::after {
@@ -481,9 +558,9 @@
   }
 
   .hamburger-menu:hover {
-    background: var(--accent-12);
-    box-shadow: 0 0 16px var(--accent-25), inset 0 0 8px var(--accent-10);
-    transform: scale(1.05);
+    background: var(--accent-12) !important;
+    box-shadow: 0 0 16px var(--accent-25), inset 0 0 8px var(--accent-10) !important;
+    transform: scale(1.05) !important;
   }
 
   .hamburger-menu:hover::after {
@@ -491,69 +568,69 @@
   }
 
   .hamburger-menu:active {
-    transform: scale(1.02);
+    transform: scale(1.02) !important;
   }
 
   .hamburger-menu.active {
-    background: var(--accent-15);
-    border-color: var(--accent);
-    box-shadow: 0 0 20px var(--accent-30), inset 0 0 10px var(--accent-10);
+    background: var(--accent-15) !important;
+    border-color: var(--accent) !important;
+    box-shadow: 0 0 20px var(--accent-30), inset 0 0 10px var(--accent-10) !important;
   }
 
   .hamburger-menu.active:hover {
-    transform: scale(1.08);
+    transform: scale(1.08) !important;
   }
 
   .hamburger-line {
-    width: 22px;
-    height: 2px;
-    background: var(--accent);
-    border-radius: 1px;
-    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-    transform-origin: center;
-    position: relative;
-    box-shadow: 0 0 6px var(--accent-40);
+    width: 22px !important;
+    height: 2px !important;
+    background: var(--accent) !important;
+    border-radius: 1px !important;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+    transform-origin: center !important;
+    position: relative !important;
+    box-shadow: 0 0 6px var(--accent-40) !important;
   }
 
   .hamburger-menu:hover .hamburger-line {
-    box-shadow: 0 0 8px var(--accent-60);
+    box-shadow: 0 0 8px var(--accent-60) !important;
   }
 
   .hamburger-menu.active .hamburger-line:nth-child(1) {
-    transform: rotate(45deg) translateY(10px);
-    box-shadow: 0 0 8px var(--accent);
+    transform: rotate(45deg) translateY(10px) !important;
+    box-shadow: 0 0 8px var(--accent) !important;
   }
 
   .hamburger-menu.active .hamburger-line:nth-child(2) {
-    opacity: 0;
-    transform: scale(0);
+    opacity: 0 !important;
+    transform: scale(0) !important;
   }
 
   .hamburger-menu.active .hamburger-line:nth-child(3) {
-    transform: rotate(-45deg) translateY(-10px);
-    box-shadow: 0 0 8px var(--accent);
+    transform: rotate(-45deg) translateY(-10px) !important;
+    box-shadow: 0 0 8px var(--accent) !important;
   }
 
   .menu {
-    display: none;
-    flex-direction: column;
-    gap: 0;
-    position: fixed;
-    top: clamp(62px, 14vh, 98px);
-    left: 0;
-    right: 0;
-    background: rgba(8, 8, 8, 0.98);
-    backdrop-filter: blur(10px);
-    padding: 0;
-    border-bottom: 1px solid var(--accent-10);
-    z-index: 99;
-    width: 100%;
-    align-items: stretch;
-    animation: slideDown 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
-    box-shadow: 0 8px 32px var(--accent-05), 0 16px 40px rgba(0, 0, 0, 0.6);
-    max-height: calc(100vh - 100px);
-    overflow-y: auto;
-    scroll-behavior: smooth;
+    display: none !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+    position: fixed !important;
+    top: clamp(62px, 14vh, 98px) !important;
+    left: 0 !important;
+    right: 0 !important;
+    background: rgba(8, 8, 8, 0.98) !important;
+    backdrop-filter: blur(10px) !important;
+    padding: 0 !important;
+    border-bottom: 1px solid var(--accent-10) !important;
+    z-index: 99 !important;
+    width: 100% !important;
+    align-items: stretch !important;
+    animation: slideDown 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards !important;
+    box-shadow: 0 8px 32px var(--accent-05), 0 16px 40px rgba(0, 0, 0, 0.6) !important;
+    max-height: calc(100vh - 100px) !important;
+    overflow-y: auto !important;
+    scroll-behavior: smooth !important;
   }
 
   @keyframes slideDown {
@@ -570,7 +647,7 @@
   }
 
   .menu.mobile-active {
-    display: flex;
+    display: flex !important;
   }
 
   .menu.mobile-active .menu-link {
@@ -609,29 +686,33 @@
   }
 
   .menu-link {
-    padding: clamp(16px, 3.5vw, 20px) clamp(18px, 4vw, 24px);
-    width: 100%;
-    flex-direction: row;
-    border-left: 3px solid transparent;
-    position: relative;
-    background: transparent;
-    justify-content: flex-start;
-    gap: 12px;
-    font-size: clamp(13px, 1.4vw, 14px);
-    align-items: center;
-    letter-spacing: 0.7px;
-    font-weight: 500;
-    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-    color: var(--text-75);
-    border-bottom: 1px solid var(--accent-04);
-    cursor: pointer;
-    user-select: none;
-    min-height: 44px;
-    display: flex;
+    padding: clamp(16px, 3.5vw, 20px) clamp(18px, 4vw, 24px) !important;
+    width: 100% !important;
+    flex-direction: row !important;
+    border-left: 3px solid transparent !important;
+    position: relative !important;
+    background: transparent !important;
+    justify-content: flex-start !important;
+    gap: 12px !important;
+    font-size: clamp(13px, 1.4vw, 14px) !important;
+    align-items: center !important;
+    letter-spacing: 0.7px !important;
+    font-weight: 500 !important;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+    color: var(--text-75) !important;
+    border-bottom: 1px solid var(--accent-04) !important;
+    border-radius: 0 !important;
+    cursor: pointer !important;
+    user-select: none !important;
+    min-height: 44px !important;
+    display: flex !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
   }
 
   .menu-link:last-child {
-    border-bottom: none;
+    border-bottom: none !important;
   }
 
   .menu-link::before {
@@ -658,10 +739,13 @@
   }
 
   .menu-link:hover {
-    background: var(--accent-08);
-    border-left-color: var(--accent);
-    color: var(--accent);
-    padding-left: clamp(20px, 4.3vw, 28px);
+    background: var(--accent-08) !important;
+    border-left-color: var(--accent) !important;
+    color: var(--accent) !important;
+    padding-left: clamp(20px, 4.3vw, 28px) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
   }
 
   .menu-link:hover::before {
@@ -673,14 +757,18 @@
   }
 
   .menu-link:active {
-    transform: scale(0.98);
-    background: var(--accent-12);
+    transform: scale(0.98) !important;
+    background: var(--accent-12) !important;
   }
 
   .menu-link.active {
-    background: rgba(204, 255, 0, 0.1);
-    border-left-color: var(--accent);
-    color: var(--accent);
+    background: var(--accent-10) !important;
+    border-left-color: var(--accent) !important;
+    color: var(--accent) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    padding: clamp(16px, 3.5vw, 20px) clamp(18px, 4vw, 24px) !important;
   }
 
   .menu-link.active::before {
@@ -689,22 +777,22 @@
 
   .link-bg,
   .link-underline {
-    display: none;
+    display: none !important;
   }
 
   .mobile-menu-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(8px);
-    z-index: 98;
-    animation: fadeIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
-    cursor: pointer;
-    transition: backdrop-filter 0.3s ease;
+    position: fixed !important;
+    inset: 0 !important;
+    background: rgba(0, 0, 0, 0.6) !important;
+    backdrop-filter: blur(8px) !important;
+    z-index: 98 !important;
+    animation: fadeIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards !important;
+    cursor: pointer !important;
+    transition: backdrop-filter 0.3s ease !important;
   }
 
   .mobile-menu-overlay:hover {
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px) !important;
   }
 
   @keyframes fadeIn {
@@ -717,119 +805,173 @@
       backdrop-filter: blur(8px);
     }
   }
+
+  /* Light Mode Mobile - COLORS ONLY */
+  body.theme-light .hamburger-menu {
+    background: var(--accent-08) !important;
+    border: 1.5px solid var(--accent) !important;
+    border-radius: 6px !important;
+    padding: 10px 12px !important;
+  }
+
+  body.theme-light .hamburger-menu:hover {
+    background: var(--accent-12) !important;
+    border-color: var(--accent) !important;
+    box-shadow: 0 0 16px var(--accent-25), inset 0 0 8px var(--accent-10) !important;
+  }
+
+  body.theme-light .hamburger-menu.active {
+    background: var(--accent-15) !important;
+    border-color: var(--accent) !important;
+    box-shadow: 0 0 20px var(--accent-30), inset 0 0 10px var(--accent-10) !important;
+  }
+
+  body.theme-light .hamburger-line {
+    background: var(--accent) !important;
+  }
+
+  body.theme-light .menu {
+    background: rgba(255, 255, 255, 0.98) !important;
+    border-bottom: 1px solid var(--accent-10) !important;
+    box-shadow: 0 8px 32px var(--accent-05), 0 16px 40px rgba(0, 0, 0, 0.6) !important;
+  }
+
+  body.theme-light .menu-link {
+    color: var(--text-75) !important;
+    border-bottom: 1px solid var(--accent-04) !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    padding: clamp(16px, 3.5vw, 20px) clamp(18px, 4vw, 24px) !important;
+  }
+
+  body.theme-light .menu-link:hover {
+    background: var(--accent-08) !important;
+    color: var(--accent) !important;
+    border-left-color: var(--accent) !important;
+    padding-left: clamp(20px, 4.3vw, 28px) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  body.theme-light .menu-link:active {
+    background: var(--accent-12) !important;
+  }
+
+  body.theme-light .menu-link.active {
+    background: var(--accent-10) !important;
+    color: var(--accent) !important;
+    border-left-color: var(--accent) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    padding: clamp(16px, 3.5vw, 20px) clamp(18px, 4vw, 24px) !important;
+  }
+
+  body.theme-light .mobile-menu-overlay {
+    background: rgba(255, 255, 255, 0.6) !important;
+    backdrop-filter: blur(8px) !important;
+  }
 }
 
 @media (max-width: 640px) {
   .nav {
-    padding: clamp(12px, 2.5vw, 16px) clamp(12px, 3%, 3%);
-    gap: clamp(10px, 1.8vw, 14px);
-    min-height: clamp(62px, 13vh, 85px);
+    padding: clamp(12px, 2.5vw, 16px) clamp(12px, 3%, 3%) !important;
+    gap: clamp(10px, 1.8vw, 14px) !important;
+    min-height: clamp(62px, 13vh, 85px) !important;
   }
 
   .nav-container {
-    width: 100%;
-    justify-content: space-between;
-    max-width: 100%;
-    padding: 0;
-    gap: clamp(10px, 1.8vw, 14px);
-    align-items: center;
+    width: 100% !important;
+    justify-content: space-between !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    gap: clamp(10px, 1.8vw, 14px) !important;
+    align-items: center !important;
   }
 
   .brand {
-    font-size: clamp(12px, 2.8vw, 15px);
-    gap: clamp(1px, 0.3vw, 2px);
-    flex-shrink: 0;
-    min-width: fit-content;
-    letter-spacing: 0.6px;
+    font-size: clamp(12px, 2.8vw, 15px) !important;
+    gap: clamp(1px, 0.3vw, 2px) !important;
+    flex-shrink: 0 !important;
+    min-width: fit-content !important;
+    letter-spacing: 0.6px !important;
   }
 
   .brand-studio {
-    font-size: clamp(8px, 1.8vw, 10px);
+    font-size: clamp(8px, 1.8vw, 10px) !important;
   }
 
   .menu {
-    top: clamp(60px, 13vh, 84px);
-    padding: 0;
+    top: clamp(60px, 13vh, 84px) !important;
+    padding: 0 !important;
   }
 
   .menu-link {
-    font-size: clamp(11px, 1.2vw, 12px);
-    letter-spacing: 0.4px;
-    padding: clamp(13px, 2.3vw, 16px) clamp(15px, 3vw, 20px);
+    font-size: clamp(11px, 1.2vw, 12px) !important;
+    letter-spacing: 0.4px !important;
+    padding: clamp(13px, 2.3vw, 16px) clamp(15px, 3vw, 20px) !important;
+  }
+
+  body.theme-light .menu-link {
+    padding: clamp(13px, 2.3vw, 16px) clamp(15px, 3vw, 20px) !important;
+  }
+
+  body.theme-light .menu-link:hover {
+    padding-left: clamp(17px, 3.5vw, 24px) !important;
+  }
+
+  body.theme-light .menu-link.active {
+    padding: clamp(13px, 2.3vw, 16px) clamp(15px, 3vw, 20px) !important;
   }
 
   .hamburger-menu {
-    width: auto;
-    height: auto;
-    padding: 10px 12px;
-    gap: 6px;
-    background: rgba(204, 255, 0, 0.08);
-    border: 1.5px solid var(--accent);
-    border-radius: 6px;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-  }
-
-  .hamburger-menu:hover {
-    background: rgba(204, 255, 0, 0.12);
-    box-shadow: 0 0 14px var(--accent-25);
-    transform: scale(1.05);
-  }
-
-  .hamburger-menu.active {
-    background: var(--accent-15);
-    border-color: var(--accent);
-    box-shadow: 0 0 18px var(--accent-30);
+    width: auto !important;
+    height: auto !important;
+    padding: 10px 12px !important;
+    gap: 6px !important;
   }
 
   .hamburger-line {
-    width: 20px;
-    height: 2px;
-    background: var(--accent);
-    border-radius: 1px;
-    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    width: 20px !important;
+    height: 2px !important;
   }
 
   .hamburger-menu.active .hamburger-line:nth-child(1) {
-    transform: rotate(45deg) translateY(9px);
-  }
-
-  .hamburger-menu.active .hamburger-line:nth-child(2) {
-    opacity: 0;
-    transform: scale(0);
+    transform: rotate(45deg) translateY(9px) !important;
   }
 
   .hamburger-menu.active .hamburger-line:nth-child(3) {
-    transform: rotate(-45deg) translateY(-9px);
+    transform: rotate(-45deg) translateY(-9px) !important;
   }
 }
 
 @media (max-width: 480px) {
   .nav {
-    padding: clamp(10px, 2.2vw, 14px) clamp(10px, 2.5%, 2.5%);
-    gap: clamp(8px, 1.5vw, 11px);
-    min-height: clamp(56px, 11.5vh, 76px);
+    padding: clamp(10px, 2.2vw, 14px) clamp(10px, 2.5%, 2.5%) !important;
+    gap: clamp(8px, 1.5vw, 11px) !important;
+    min-height: clamp(56px, 11.5vh, 76px) !important;
   }
 
   .nav-container {
-    gap: clamp(8px, 1.5vw, 11px);
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+    gap: clamp(8px, 1.5vw, 11px) !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
   }
 
   .brand {
-    font-size: clamp(11px, 2.5vw, 13px);
-    letter-spacing: 0.5px;
-    gap: clamp(1px, 0.2vw, 2px);
-    flex-shrink: 0;
-    min-width: fit-content;
+    font-size: clamp(11px, 2.5vw, 13px) !important;
+    letter-spacing: 0.5px !important;
+    gap: clamp(1px, 0.2vw, 2px) !important;
+    flex-shrink: 0 !important;
+    min-width: fit-content !important;
   }
 
   .brand-studio {
-    font-size: clamp(7px, 1.5vw, 9px);
+    font-size: clamp(7px, 1.5vw, 9px) !important;
   }
 
   .brand-glow {
@@ -840,20 +982,20 @@
   }
 
   .menu {
-    gap: 0;
-    top: clamp(56px, 11.5vh, 76px);
-    padding: clamp(6px, 1.2vw, 9px) 0;
-    max-height: calc(100vh - clamp(56px, 11.5vh, 76px));
-    box-shadow: 0 clamp(8px, 1.5vw, 12px) clamp(16px, 3vw, 24px) rgba(0, 0, 0, 0.5);
+    gap: 0 !important;
+    top: clamp(56px, 11.5vh, 76px) !important;
+    padding: clamp(6px, 1.2vw, 9px) 0 !important;
+    max-height: calc(100vh - clamp(56px, 11.5vh, 76px)) !important;
+    box-shadow: 0 clamp(8px, 1.5vw, 12px) clamp(16px, 3vw, 24px) rgba(0, 0, 0, 0.5) !important;
   }
 
   .menu-link {
-    font-size: clamp(10px, 1.1vw, 11px);
-    letter-spacing: 0.3px;
-    padding: clamp(13px, 2.2vw, 16px) clamp(15px, 3vw, 18px);
-    border-left: 3px solid var(--accent);
-    padding-left: clamp(12px, 2.5vw, 15px);
-    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    font-size: clamp(10px, 1.1vw, 11px) !important;
+    letter-spacing: 0.3px !important;
+    padding: clamp(13px, 2.2vw, 16px) clamp(15px, 3vw, 18px) !important;
+    border-left: 3px solid var(--accent) !important;
+    padding-left: clamp(12px, 2.5vw, 15px) !important;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
   }
 
   .menu-link::after {
@@ -870,75 +1012,63 @@
     transform: translateX(clamp(2px, 0.5vw, 3px));
   }
 
+  body.theme-light .menu-link {
+    padding: clamp(13px, 2.2vw, 16px) clamp(15px, 3vw, 18px) !important;
+    padding-left: clamp(12px, 2.5vw, 15px) !important;
+  }
+
+  body.theme-light .menu-link:hover {
+    padding-left: clamp(15px, 3vw, 22px) !important;
+  }
+
+  body.theme-light .menu-link.active {
+    padding: clamp(13px, 2.2vw, 16px) clamp(15px, 3vw, 18px) !important;
+    padding-left: clamp(12px, 2.5vw, 15px) !important;
+  }
+
   .hamburger-menu {
-    width: auto;
-    height: auto;
-    gap: 5px;
-    padding: 9px 11px;
-    background: var(--accent-08);
-    border: 1.5px solid var(--accent);
-    border-radius: 5px;
-    position: relative;
-    transition: all 0.3s ease;
-  }
-
-  .hamburger-menu:hover {
-    background: var(--accent-12);
-    box-shadow: 0 0 10px var(--accent-20);
-  }
-
-  .hamburger-menu.active {
-    background: var(--accent-10);
+    width: auto !important;
+    height: auto !important;
+    gap: 5px !important;
+    padding: 9px 11px !important;
   }
 
   .hamburger-line {
-    width: 18px;
-    height: 1.5px;
-    background: var(--accent);
-    border-radius: 1px;
-    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    width: 18px !important;
+    height: 1.5px !important;
   }
 
   .hamburger-menu.active .hamburger-line:nth-child(1) {
-    transform: rotate(45deg) translateY(8px);
-  }
-
-  .hamburger-menu.active .hamburger-line:nth-child(2) {
-    opacity: 0;
-    transform: scale(0);
+    transform: rotate(45deg) translateY(8px) !important;
   }
 
   .hamburger-menu.active .hamburger-line:nth-child(3) {
-    transform: rotate(-45deg) translateY(-8px);
-  }
-
-  .menu-link::before {
-    width: 2px;
+    transform: rotate(-45deg) translateY(-8px) !important;
   }
 }
 
 @media (max-width: 360px) {
   .nav {
-    padding: clamp(9px, 2vw, 12px) clamp(8px, 2%, 2%);
-    gap: clamp(6px, 1.2vw, 8px);
-    min-height: clamp(52px, 10.5vh, 70px);
+    padding: clamp(9px, 2vw, 12px) clamp(8px, 2%, 2%) !important;
+    gap: clamp(6px, 1.2vw, 8px) !important;
+    min-height: clamp(52px, 10.5vh, 70px) !important;
   }
 
   .nav-container {
-    gap: clamp(6px, 1.2vw, 8px);
-    justify-content: space-between;
-    align-items: center;
+    gap: clamp(6px, 1.2vw, 8px) !important;
+    justify-content: space-between !important;
+    align-items: center !important;
   }
 
   .brand {
-    font-size: clamp(10px, 2.3vw, 12px);
-    letter-spacing: 0.4px;
-    gap: 1px;
-    flex-shrink: 0;
+    font-size: clamp(10px, 2.3vw, 12px) !important;
+    letter-spacing: 0.4px !important;
+    gap: 1px !important;
+    flex-shrink: 0 !important;
   }
 
   .brand-studio {
-    display: none;
+    display: none !important;
   }
 
   .brand-glow {
@@ -949,18 +1079,18 @@
   }
 
   .menu {
-    top: clamp(52px, 10.5vh, 70px);
-    padding: clamp(5px, 1vw, 8px) 0;
-    max-height: calc(100vh - clamp(52px, 10.5vh, 70px));
-    box-shadow: 0 clamp(6px, 1.2vw, 10px) clamp(12px, 2.5vw, 20px) rgba(0, 0, 0, 0.4);
+    top: clamp(52px, 10.5vh, 70px) !important;
+    padding: clamp(5px, 1vw, 8px) 0 !important;
+    max-height: calc(100vh - clamp(52px, 10.5vh, 70px)) !important;
+    box-shadow: 0 clamp(6px, 1.2vw, 10px) clamp(12px, 2.5vw, 20px) rgba(0, 0, 0, 0.4) !important;
   }
 
   .menu-link {
-    font-size: clamp(9px, 0.95vw, 10px);
-    padding: clamp(12px, 2vw, 14px) clamp(12px, 2.5vw, 14px);
-    letter-spacing: 0.2px;
-    border-left: 2px solid var(--accent);
-    padding-left: clamp(10px, 2vw, 12px);
+    font-size: clamp(9px, 0.95vw, 10px) !important;
+    padding: clamp(12px, 2vw, 14px) clamp(12px, 2.5vw, 14px) !important;
+    letter-spacing: 0.2px !important;
+    border-left: 2px solid var(--accent) !important;
+    padding-left: clamp(10px, 2vw, 12px) !important;
   }
 
   .menu-link::after {
@@ -977,53 +1107,45 @@
     transform: translateX(2px);
   }
 
+  body.theme-light .menu-link {
+    padding: clamp(12px, 2vw, 14px) clamp(12px, 2.5vw, 14px) !important;
+    padding-left: clamp(10px, 2vw, 12px) !important;
+  }
+
+  body.theme-light .menu-link:hover {
+    padding-left: clamp(12px, 2.5vw, 16px) !important;
+  }
+
+  body.theme-light .menu-link.active {
+    padding: clamp(12px, 2vw, 14px) clamp(12px, 2.5vw, 14px) !important;
+    padding-left: clamp(10px, 2vw, 12px) !important;
+  }
+
   .hamburger-menu {
-    width: auto;
-    height: auto;
-    gap: 4px;
-    padding: 8px 10px;
-    background: var(--accent-08);
-    border: 1.5px solid var(--accent);
-    border-radius: 4px;
-    position: relative;
-    transition: all 0.3s ease;
-  }
-
-  .hamburger-menu:hover {
-    background: var(--accent-12);
-    box-shadow: 0 0 8px var(--accent-20);
-  }
-
-  .hamburger-menu.active {
-    background: var(--accent-10);
+    width: auto !important;
+    height: auto !important;
+    gap: 4px !important;
+    padding: 8px 10px !important;
   }
 
   .hamburger-line {
-    width: 16px;
-    height: 1.5px;
-    background: var(--accent);
-    border-radius: 1px;
-    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    width: 16px !important;
+    height: 1.5px !important;
   }
 
   .hamburger-menu.active .hamburger-line:nth-child(1) {
-    transform: rotate(45deg) translateY(7px);
-  }
-
-  .hamburger-menu.active .hamburger-line:nth-child(2) {
-    opacity: 0;
-    transform: scale(0);
+    transform: rotate(45deg) translateY(7px) !important;
   }
 
   .hamburger-menu.active .hamburger-line:nth-child(3) {
-    transform: rotate(-45deg) translateY(-7px);
+    transform: rotate(-45deg) translateY(-7px) !important;
   }
 
   .menu-label {
-    display: none;
+    display: none !important;
   }
 
   .menu-link::before {
-    width: 2px;
+    width: 2px !important;
   }
 }

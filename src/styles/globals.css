@@ -132,11 +132,65 @@ body.theme-light {
 body.theme-light .nav,
 body.theme-light .nav-bg-effect,
 body.theme-light .footer {
-  background: linear-gradient(90deg, #fff 80%, #eaf1fb 100%) !important;
-  color: var(--text) !important;
-  border-bottom: 1.5px solid var(--line) !important;
-  box-shadow: 0 4px 32px 0 rgba(25, 118, 210, 0.08);
-  backdrop-filter: blur(8px);
+  background: linear-gradient(120deg, #fafdff 60%, #e3f0ff 100%) !important;
+  color: #0a1a2f !important;
+  border-bottom: 2.5px solid #1976d2 !important;
+  box-shadow: 0 8px 36px 0 #b3d1f7, 0 1.5px 8px 0 #1976d2;
+  backdrop-filter: blur(14px) saturate(1.15);
+  position: relative;
+  z-index: 100;
+}
+body.theme-light .nav-container {
+  background: rgba(255,255,255,0.92) !important;
+  box-shadow: 0 2px 12px #e3eafc;
+  border-radius: 18px;
+  padding: 0 18px;
+}
+body.theme-light .brand {
+  color: #1976d2 !important;
+  background: none !important;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 12px #e3eafc;
+}
+body.theme-light .brand-text {
+  color: #1976d2 !important;
+  text-shadow: 0 2px 12px #e3eafc, 0 0 8px #fff;
+  font-size: 1.18em;
+}
+body.theme-light .menu {
+  background: none !important;
+  box-shadow: none !important;
+}
+body.theme-light .menu-link {
+  color: #0a1a2f !important;
+  background: linear-gradient(90deg, #fafdff 85%, #e3f0ff 100%) !important;
+  border-left: 3.5px solid #1976d2 !important;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  box-shadow: 0 2px 0 0 #e3eafc, 0 0.5px 4px #b3d1f7;
+  border-radius: 14px;
+  margin: 3px 0;
+  padding: 10px 18px;
+  font-size: 1.04em;
+  transition: background 0.22s, color 0.22s, box-shadow 0.22s;
+}
+body.theme-light .menu-link.active,
+body.theme-light .menu-link:hover,
+body.theme-light .menu-link.active {
+  color: #fff !important;
+  background: linear-gradient(90deg, #1976d2 0%, #2196f3 100%) !important;
+  border-left: 3.5px solid #1976d2 !important;
+  box-shadow: 0 8px 32px 0 #b3d1f7, 0 1.5px 8px 0 #1976d2;
+  text-shadow: 0 2px 8px #1976d2, 0 0 8px #2196f3;
+}
+body.theme-light .hamburger-menu {
+  background: #e3f0ff !important;
+  border: 2px solid #1976d2 !important;
+  box-shadow: 0 2px 16px #b3d1f7, 0 1.5px 8px 0 #1976d2;
+}
+body.theme-light .mobile-menu-overlay {
+  background: rgba(179, 209, 247, 0.85) !important;
 }
 
 body.theme-light .card,
