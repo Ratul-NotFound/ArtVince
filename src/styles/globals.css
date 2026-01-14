@@ -21,10 +21,12 @@
   --accent-12: rgba(33, 150, 243, 0.12);
   --accent-15: rgba(33, 150, 243, 0.15);
   --accent-20: rgba(33, 150, 243, 0.20);
+  --accent-25: rgba(33, 150, 243, 0.25);
   --accent-30: rgba(33, 150, 243, 0.30);
   --accent-40: rgba(33, 150, 243, 0.40);
   --accent-50: rgba(33, 150, 243, 0.50);
   --accent-60: rgba(33, 150, 243, 0.60);
+  --accent-70: rgba(33, 150, 243, 0.70);
   --accent-80: rgba(33, 150, 243, 0.80);
   --accent-90: rgba(33, 150, 243, 0.90);
   
@@ -50,6 +52,7 @@
   --text-45: rgba(255, 255, 255, 0.45);
   --text-60: rgba(255, 255, 255, 0.60);
   --text-75: rgba(255, 255, 255, 0.75);
+  --text-80: rgba(255, 255, 255, 0.80);
   --text-85: rgba(255, 255, 255, 0.85);
   
   /* Shadow Colors */
@@ -106,94 +109,41 @@ body.theme-dark {
 }
 
 body.theme-light {
-  --bg: linear-gradient(135deg, #fff 70%, #eaf1fb 100%);
+  --bg: #ffffff;
   --text: #111827;
-  --accent: #1976d2;
-  --accent-08: rgba(25, 118, 210, 0.08);
-  --accent-10: rgba(25, 118, 210, 0.10);
-  --accent-12: rgba(25, 118, 210, 0.12);
-  --accent-15: rgba(25, 118, 210, 0.15);
-  --accent-20: rgba(25, 118, 210, 0.20);
-  --accent-25: #60a5fa;
-  --accent-30: #2196f3;
-  --accent-40: #1976d2;
-  --accent-60: #1565c0;
-  --accent-05: #f1f5f9;
-  --accent-04: #f3f6fb;
-  --accent-03: #f8fafc;
-  --accent-02: #f9fafb;
-  --accent-01: #ffffff;
-  --line: #c7d7ee;
+  --text-20: rgba(17, 24, 39, 0.20);
+  --text-40: rgba(17, 24, 39, 0.40);
+  --text-45: rgba(17, 24, 39, 0.45);
+  --text-60: rgba(17, 24, 39, 0.60);
+  --text-75: rgba(17, 24, 39, 0.75);
+  --text-80: rgba(17, 24, 39, 0.80);
+  --text-85: rgba(17, 24, 39, 0.85);
+  --accent: #2196f3;
+  --accent-02: rgba(33, 150, 243, 0.02);
+  --accent-03: rgba(33, 150, 243, 0.03);
+  --accent-04: rgba(33, 150, 243, 0.04);
+  --accent-05: rgba(33, 150, 243, 0.05);
+  --accent-06: rgba(33, 150, 243, 0.06);
+  --accent-08: rgba(33, 150, 243, 0.08);
+  --accent-10: rgba(33, 150, 243, 0.10);
+  --accent-12: rgba(33, 150, 243, 0.12);
+  --accent-15: rgba(33, 150, 243, 0.15);
+  --accent-20: rgba(33, 150, 243, 0.20);
+  --accent-25: rgba(33, 150, 243, 0.25);
+  --accent-30: rgba(33, 150, 243, 0.30);
+  --accent-40: rgba(33, 150, 243, 0.40);
+  --accent-50: rgba(33, 150, 243, 0.50);
+  --accent-60: rgba(33, 150, 243, 0.60);
+  --accent-70: rgba(33, 150, 243, 0.70);
+  --accent-80: rgba(33, 150, 243, 0.80);
+  --accent-90: rgba(33, 150, 243, 0.90);
+  --line: rgba(33, 150, 243, 0.1);
   --dim: #4b5c7a;
-  background: var(--bg);
+  background: linear-gradient(135deg, #fff 70%, #eaf1fb 100%);
   color: var(--text);
 }
 
-body.theme-light .nav,
-body.theme-light .nav-bg-effect,
-body.theme-light .footer {
-  background: linear-gradient(120deg, #fafdff 60%, #e3f0ff 100%) !important;
-  color: #0a1a2f !important;
-  border-bottom: 2.5px solid #1976d2 !important;
-  box-shadow: 0 8px 36px 0 #b3d1f7, 0 1.5px 8px 0 #1976d2;
-  backdrop-filter: blur(14px) saturate(1.15);
-  position: relative;
-  z-index: 100;
-}
-body.theme-light .nav-container {
-  background: rgba(255,255,255,0.92) !important;
-  box-shadow: 0 2px 12px #e3eafc;
-  border-radius: 18px;
-  padding: 0 18px;
-}
-body.theme-light .brand {
-  color: #1976d2 !important;
-  background: none !important;
-  font-weight: 800;
-  letter-spacing: 2px;
-  text-shadow: 0 2px 12px #e3eafc;
-}
-body.theme-light .brand-text {
-  color: #1976d2 !important;
-  text-shadow: 0 2px 12px #e3eafc, 0 0 8px #fff;
-  font-size: 1.18em;
-}
-body.theme-light .menu {
-  background: none !important;
-  box-shadow: none !important;
-}
-body.theme-light .menu-link {
-  color: #0a1a2f !important;
-  background: linear-gradient(90deg, #fafdff 85%, #e3f0ff 100%) !important;
-  border-left: 3.5px solid #1976d2 !important;
-  font-weight: 700;
-  letter-spacing: 1.2px;
-  box-shadow: 0 2px 0 0 #e3eafc, 0 0.5px 4px #b3d1f7;
-  border-radius: 14px;
-  margin: 3px 0;
-  padding: 10px 18px;
-  font-size: 1.04em;
-  transition: background 0.22s, color 0.22s, box-shadow 0.22s;
-}
-body.theme-light .menu-link.active,
-body.theme-light .menu-link:hover,
-body.theme-light .menu-link.active {
-  color: #fff !important;
-  background: linear-gradient(90deg, #1976d2 0%, #2196f3 100%) !important;
-  border-left: 3.5px solid #1976d2 !important;
-  box-shadow: 0 8px 32px 0 #b3d1f7, 0 1.5px 8px 0 #1976d2;
-  text-shadow: 0 2px 8px #1976d2, 0 0 8px #2196f3;
-}
-body.theme-light .hamburger-menu {
-  background: #e3f0ff !important;
-  border: 2px solid #1976d2 !important;
-  box-shadow: 0 2px 16px #b3d1f7, 0 1.5px 8px 0 #1976d2;
-}
-body.theme-light .mobile-menu-overlay {
-  background: rgba(179, 209, 247, 0.85) !important;
-}
-
-body.theme-light .card,
+/* Light Mode Cards */
 body.theme-light .card,
 body.theme-light .card-inner {
   background: linear-gradient(120deg, #fff 85%, #e3f0ff 100%) !important;
@@ -210,26 +160,6 @@ body.theme-light .card-info {
   border-top: 1.5px solid #d0e3fa !important;
   box-shadow: 0 -2px 32px 0 rgba(25, 118, 210, 0.10);
   border-radius: 0 0 20px 20px !important;
-}
-
-body.theme-light .menu-link {
-  color: var(--text) !important;
-  background: linear-gradient(90deg, #fff 90%, #eaf1fb 100%) !important;
-  border-left: 3px solid var(--accent-10) !important;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  box-shadow: 0 1px 0 0 var(--line);
-  border-radius: 10px;
-  margin: 2px 0;
-  transition: background 0.2s, color 0.2s;
-}
-
-body.theme-light .menu-link.active,
-body.theme-light .menu-link:hover {
-  color: var(--accent-40) !important;
-  background: linear-gradient(90deg, #eaf1fb 80%, #dbeafe 100%) !important;
-  border-left: 3px solid var(--accent-40) !important;
-  box-shadow: 0 4px 24px 0 rgba(25, 118, 210, 0.10);
 }
 
 body.theme-light .service-badge {
