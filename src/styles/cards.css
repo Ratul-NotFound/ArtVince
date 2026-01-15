@@ -328,3 +328,91 @@
 }
 
 /* ==================== LIGHT MODE - PROFESSIONAL SYNC ==================== */
+
+/* Force cards to use dark-mode styles when body.theme-light is active */
+body.theme-light .card,
+body.theme-light .grid .card,
+body.theme-light .grid .card-inner,
+body.theme-light .grid .card-info {
+  background: #000 !important;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 90% 100%, 0 100%) !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  overflow: hidden !important;
+}
+
+body.theme-light .grid .card::before,
+body.theme-light .card::before {
+  background: var(--accent) !important;
+}
+
+body.theme-light .grid .card::after,
+body.theme-light .card::after {
+  opacity: 0.8 !important;
+  filter: blur(8px) !important;
+}
+
+body.theme-light .grid .card-inner,
+body.theme-light .card-inner {
+  box-shadow: 
+    0 0 20px rgba(33, 150, 243, 0.3),
+    0 20px 60px rgba(0, 0, 0, 0.9),
+    inset 0 1px 0 rgba(33, 150, 243, 0.1) !important;
+}
+
+body.theme-light .grid .card-img,
+body.theme-light .card-img {
+  filter: brightness(0.7) contrast(1.2) saturate(0.8) hue-rotate(-10deg) !important;
+  transform: scale(1.15) !important;
+}
+
+body.theme-light .grid .card-info,
+body.theme-light .card-info {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.6) 40%,
+    rgba(0, 0, 0, 0.95) 100%
+  ) !important;
+  border-top: 2px solid rgba(33, 150, 243, 0.1) !important;
+  border-radius: 0 !important;
+}
+
+body.theme-light .grid .card-title,
+body.theme-light .card-title {
+  color: #2196f3 !important;
+  text-shadow: 0 0 20px rgba(33,150,243,0) !important;
+}
+
+body.theme-light .grid .card-cat,
+body.theme-light .card-cat,
+body.theme-light .grid .service-badge,
+body.theme-light .service-badge {
+  color: var(--accent) !important;
+  background: rgba(33,150,243,0.05) !important;
+  border-color: rgba(33,150,243,0.2) !important;
+}
+
+body.theme-light .grid .card-border,
+body.theme-light .card-border {
+  border: 2px solid rgba(33,150,243,0.2) !important;
+  box-shadow: inset 0 0 40px rgba(33,150,243,0) !important;
+}
+
+body.theme-light .grid .card:hover .card-img,
+body.theme-light .grid .card.selected .card-img,
+body.theme-light .card:hover .card-img,
+body.theme-light .card.selected .card-img {
+  filter: brightness(1.4) saturate(1.6) contrast(1.4) hue-rotate(10deg) drop-shadow(0 0 30px rgba(33, 150, 243, 0.5)) !important;
+}
+
+/* ensure hover accents look identical */
+body.theme-light .grid .card:hover .card-border,
+body.theme-light .grid .card.selected .card-border,
+body.theme-light .card:hover .card-border,
+body.theme-light .card.selected .card-border {
+  border-color: var(--accent) !important;
+  box-shadow: inset 0 0 60px rgba(33,150,243,0.2) , 0 0 50px rgba(33,150,243,0.4) !important;
+}
+

@@ -5,6 +5,105 @@ body.theme-light .hero-professional {
               linear-gradient(180deg, #f8f9fe 0%, #eef2ff 100%);
   border-bottom: 1px solid rgba(139, 92, 246, 0.15);
 }
+
+/* === FORCE HERO CARDS TO DARK VISUALS IN LIGHT MODE === */
+body.theme-light .portfolio-card,
+body.theme-light .portfolio-card::before,
+body.theme-light .portfolio-card::after,
+body.theme-light .card-content,
+body.theme-light .card-overlay {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  overflow: hidden !important;
+}
+
+body.theme-light .portfolio-card {
+  background: #000 !important;
+  border-radius: 0 !important;
+}
+
+body.theme-light .portfolio-card::before,
+body.theme-light .portfolio-card::after {
+  opacity: 0.6 !important;
+  filter: blur(8px) !important;
+  background: linear-gradient(45deg, var(--accent) 0%, rgba(0,140,255,0.5) 25%, transparent 50%) !important;
+}
+
+body.theme-light .card-content {
+  background: linear-gradient(135deg, #000 0%, #080808 100%) !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.9) !important;
+}
+
+body.theme-light .card-content img,
+body.theme-light .portfolio-card:hover .card-content img {
+  filter: brightness(0.75) contrast(1.2) saturate(1) !important;
+}
+
+body.theme-light .card-overlay {
+  background: linear-gradient(135deg, rgba(0,0,0,0.2), transparent) !important;
+  opacity: 1 !important;
+}
+
+body.theme-light .card-category {
+  color: var(--accent) !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.theme-light .card-info h3 {
+  color: #2196f3 !important;
+  text-shadow: 0 0 12px rgba(33,150,243,0.0) !important;
+}
+
+body.theme-light .card-info p {
+  color: var(--text-80) !important;
+}
+
+body.theme-light .portfolio-card:hover .card-overlay,
+body.theme-light .portfolio-card:hover::after {
+  opacity: 0.8 !important;
+}
+
+/* Final overrides: ensure hero cards show text and match dark visuals (placed last to win cascade) */
+body.theme-light .portfolio-card,
+body.theme-light .portfolio-card .card-content,
+body.theme-light .portfolio-card .card-info {
+  background: #000 !important;
+  color: var(--text) !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.9) !important;
+  overflow: hidden !important;
+}
+
+body.theme-light .portfolio-card {
+  opacity: 1 !important;
+}
+
+body.theme-light .portfolio-card .card-info {
+  z-index: 60 !important;
+  opacity: 1 !important;
+  display: block !important;
+  padding: 12px !important;
+}
+
+body.theme-light .portfolio-card .card-info h3,
+body.theme-light .portfolio-card .card-info p,
+body.theme-light .portfolio-card .card-category {
+  color: #eaf6fb !important;
+  text-shadow: 0 0 8px rgba(0,0,0,0.6) !important;
+}
+
+body.theme-light .portfolio-card .card-category {
+  color: var(--accent) !important;
+  background: transparent !important;
+}
+
+
 body.theme-light .hero-glow-bg {
   background:
     radial-gradient(ellipse 80% 80% at 50% 0%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
