@@ -7,6 +7,7 @@ body.theme-light .hero-professional {
 }
 
 /* === FORCE HERO CARDS TO DARK VISUALS IN LIGHT MODE === */
+
 body.theme-light .portfolio-card,
 body.theme-light .portfolio-card::before,
 body.theme-light .portfolio-card::after,
@@ -14,28 +15,35 @@ body.theme-light .card-content,
 body.theme-light .card-overlay {
   background: transparent !important;
   border: none !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  overflow: hidden !important;
 }
 
 body.theme-light .portfolio-card {
   background: #000 !important;
-  border-radius: 0 !important;
+  border-radius: 16px !important;
 }
 
-body.theme-light .portfolio-card::before,
-body.theme-light .portfolio-card::after {
+body.theme-light .portfolio-card::before {
+  inset: -2px !important;
+  border-radius: 16px !important;
+  background: linear-gradient(135deg, var(--accent-10) 0%, transparent 50%, var(--accent-05) 100%) !important;
   opacity: 0.6 !important;
+  transition: opacity 0.6s ease !important;
+}
+
+body.theme-light .portfolio-card::after {
+  inset: -3px !important;
+  border-radius: 16px !important;
+  background: conic-gradient(from 45deg, var(--accent), var(--accent-02), var(--accent)) !important;
+  opacity: 0.3 !important;
   filter: blur(8px) !important;
-  background: linear-gradient(45deg, var(--accent) 0%, rgba(0,140,255,0.5) 25%, transparent 50%) !important;
 }
 
 body.theme-light .card-content {
   background: linear-gradient(135deg, #000 0%, #080808 100%) !important;
-  border: 0 !important;
-  border-radius: 0 !important;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.9) !important;
+  border: 2px solid rgba(33,150,243,0.15) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 20px 60px rgba(21, 60, 120, 0.7) !important;
+  inset: 0 !important;
 }
 
 body.theme-light .card-content img,
@@ -75,9 +83,14 @@ body.theme-light .portfolio-card .card-info {
   background: #000 !important;
   color: var(--text) !important;
   border: 0 !important;
-  border-radius: 0 !important;
+  border-radius: 16px !important;
   box-shadow: 0 20px 60px rgba(0,0,0,0.9) !important;
   overflow: hidden !important;
+}
+
+/* keep inner content slightly less rounded to match design */
+body.theme-light .portfolio-card .card-content {
+  border-radius: 14px !important;
 }
 
 body.theme-light .portfolio-card {
@@ -655,4 +668,24 @@ body.theme-light .indicator-dot {
   border-radius: 50%;
   background: var(--accent);
   animation: pulse-dot 2s ease-in-out infinite;
+}
+
+/* Restore highlight/shine for hero portfolio cards in light mode */
+body.theme-light .portfolio-card:hover {
+  box-shadow: 0 30px 80px rgba(33,150,243,0.18), 0 8px 30px rgba(139,92,246,0.12) !important;
+}
+
+body.theme-light .portfolio-card:hover::after {
+  opacity: 0.35 !important;
+  filter: blur(10px) !important;
+}
+
+body.theme-light .portfolio-card:hover .card-shine {
+  opacity: 1 !important;
+  animation: shine-sweep 0.6s ease-in-out !important;
+}
+
+/* ensure shine element is visible above overlays */
+body.theme-light .portfolio-card .card-shine {
+  z-index: 20 !important;
 }
