@@ -23,8 +23,8 @@
 }
 
 .testimonial-card {
-  background: linear-gradient(135deg, var(--surface) 0%, rgba(33, 150, 243, 0.05) 100%);
-  border: 1px solid var(--line);
+  background: #000000;
+  border: 2px solid var(--accent);
   border-radius: 12px;
   padding: 50px;
   min-height: 300px;
@@ -48,7 +48,7 @@
   font-size: 18px;
   font-style: italic;
   line-height: 1.8;
-  color: var(--text);
+  color: #ffffff;
   margin-bottom: 30px;
   font-family: var(--font-body);
 }
@@ -56,7 +56,7 @@
 .testimonial-author h4 {
   font-size: 16px;
   font-weight: 600;
-  color: var(--text);
+  color: #ffffff;
   margin-bottom: 5px;
 }
 
@@ -88,66 +88,4 @@
   background: var(--accent);
   border-color: var(--accent);
   box-shadow: 0 0 12px var(--accent);
-}
-
-
-body.theme-light .testimonials-section {
-  background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(139, 92, 246, 0.06), transparent),
-              linear-gradient(180deg, #f8f9fe 0%, #eef2ff 100%);
-  border-top: 1px solid rgba(139, 92, 246, 0.15);
-}
-
-body.theme-light .section-title {
-  background: linear-gradient(90deg, #0a0e27 0%, #8b5cf6 50%, #3b82f6 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-body.theme-light .section-subtitle {
-  color: #475569;
-}
-
-body.theme-light .testimonials-intro {
-  color: #475569;
-}
-
-body.theme-light .testimonial-card {
-  background: linear-gradient(135deg, 
-    rgba(255, 255, 255, 0.9) 0%, 
-    rgba(249, 250, 255, 0.85) 100%);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(139, 92, 246, 0.20);
-  box-shadow: 
-    0 12px 48px rgba(139, 92, 246, 0.12),
-    0 4px 16px rgba(59, 130, 246, 0.08),
-    inset 0 1px 0 rgba(255, 255, 255, 0.8);
-}
-
-body.theme-light .star {
-  color: #f59e0b;
-  filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.40));
-}
-
-body.theme-light .testimonial-text {
-  color: #0a0e27;
-}
-
-body.theme-light .testimonial-author h4 {
-  color: #0a0e27;
-}
-
-body.theme-light .testimonial-author p {
-  color: #3b82f6;
-}
-
-body.theme-light .indicator {
-  border: 2px solid #94a3b8;
-}
-
-body.theme-light .indicator.active {
-  background: linear-gradient(135deg, #8b5cf6, #3b82f6);
-  border-color: transparent;
-  box-shadow: 0 0 16px rgba(139, 92, 246, 0.50);
 }
