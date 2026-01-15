@@ -201,3 +201,10 @@ body.theme-light .social-icon:hover {
   border-color: #0066ff;
   box-shadow: 0 0 20px rgba(0, 102, 255, 0.40);
 }
+body.theme-light .footer-bottom{
+  --accent: #000000;
+  --accent-glow: rgba(0, 102, 255, 0.40);
+  --text: #0a1a2f;
+
+
+}
