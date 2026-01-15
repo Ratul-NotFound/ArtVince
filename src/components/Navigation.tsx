@@ -112,89 +112,37 @@ export default function Navigation() {
     <nav className={`nav ${isScrolled ? 'scrolled' : ''}`}>
       <div className="nav-bg-effect"></div>
       <div className="nav-container" style={{display:'flex',justifyContent:'space-between',alignItems:'center',width:'100%'}}>
-        <Link href="/" className="brand hover-trigger" style={{display:'flex',alignItems:'center',gap:'10px',textDecoration:'none'}}>
-          <img src="/images/fabicon.png" alt="Artvince Logo" style={{height:'32px',width:'32px',borderRadius:'8px',boxShadow:'0 0 8px var(--accent-20)'}} />
-          <span className="brand-text" style={{textDecoration:'none',borderBottom:'none',fontWeight:700,letterSpacing:'2px'}}>ARTVINCE</span>
+        <Link href="/" className="brand hover-trigger" style={{display:'flex',alignItems:'center',gap:'8px',textDecoration:'none'}}>
+          <img src="/images/fabicon.png" alt="Artvince Logo" style={{height:'32px',width:'32px',borderRadius:'8px',boxShadow:'0 0 8px var(--accent-20)',alignSelf:'center'}} />
+          <span className="brand-text" style={{textDecoration:'none',borderBottom:'none',fontWeight:700,letterSpacing:'2px',fontSize:'24px',lineHeight:'32px',alignSelf:'center'}}>ARTVINCE</span>
           {/* Professional accent glow effect */}
-          <span style={{display:'inline-block',width:'10px',height:'10px',borderRadius:'50%',background:'radial-gradient(circle,var(--accent-20) 40%,transparent 100%)',marginLeft:'4px',boxShadow:'0 0 12px var(--accent-20)'}}></span>
+          <span style={{display:'inline-block',width:'10px',height:'10px',borderRadius:'50%',background:'radial-gradient(circle,var(--accent-20) 40%,transparent 100%)',marginLeft:'4px',boxShadow:'0 0 12px var(--accent-20)',alignSelf:'center'}}></span>
         </Link>
-        {/* Spacer to push theme switch right */}
-        <div style={{ flex: 1 }}></div>
-        {/* Professional Theme Switch Toggle */}
-        <button
-          onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-          className="theme-toggle-btn pro-toggle"
-          aria-label="Toggle theme"
-        >
-          <span className={`pro-toggle-track ${theme}`}></span>
-          <span className={`pro-toggle-thumb ${theme}`}>{theme === 'dark' ? (
-            <svg width="18" height="18" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="11" cy="11" r="7" fill="#222" stroke="#2196f3" strokeWidth="2" />
-              <path d="M11 3V1M11 21V19M4.22 4.22L2.81 2.81M19.19 19.19L17.78 17.78M3 11H1M21 11H19M4.22 17.78L2.81 19.19M19.19 2.81L17.78 4.22" stroke="#2196f3" strokeWidth="1.5" strokeLinecap="round"/>
-            </svg>
-          ) : (
-            <svg width="18" height="18" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="11" cy="11" r="7" fill="#fff" stroke="#2196f3" strokeWidth="2" />
-              <path d="M16 11A5 5 0 0 1 11 16" stroke="#2196f3" strokeWidth="1.5" strokeLinecap="round"/>
-            </svg>
-          )}</span>
-        </button>
        
         <style jsx global>{`
-          .pro-toggle {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            width: 56px;
-            height: 32px;
-            background: none;
-            border: none;
-            border-radius: 16px;
-            cursor: pointer;
-            position: relative;
-            margin-left: 24px;
-            transition: background 0.3s;
-            box-shadow: none;
-            z-index: 40;
-            padding: 0;
-          }
-          .pro-toggle-track {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 16px;
-            background: linear-gradient(90deg, #222 60%, #2196f3 100%);
-            opacity: 0.7;
-            transition: background 0.3s;
-          }
-          .pro-toggle-track.light {
-            background: linear-gradient(90deg, #fff 60%, #2196f3 100%);
-            opacity: 0.7;
-          }
-          .pro-toggle-thumb {
-            position: absolute;
-            top: 4px;
-            left: 4px;
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            background: #fff;
-            box-shadow: 0 2px 8px rgba(33,150,243,0.15);
+          .theme-switch-btn {
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: left 0.3s, background 0.3s;
-            z-index: 2;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid #2196f3;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(33, 150, 243, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
           }
-          .pro-toggle-thumb.dark {
-            left: 4px;
-            background: #222;
+          .theme-switch-btn:hover {
+            background: rgba(33, 150, 243, 0.2);
+            border-color: #2196f3;
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(33, 150, 243, 0.3);
           }
-          .pro-toggle-thumb.light {
-            left: 28px;
-            background: #fff;
+          .theme-switch-btn svg {
+            transition: all 0.3s ease;
           }
         `}</style>
         
@@ -282,6 +230,24 @@ export default function Navigation() {
             <span className="link-text">Contact</span>
             <span className="link-underline"></span>
           </Link>
+          {/* Theme Switch Button */}
+          <button
+            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+            className="theme-switch-btn"
+            aria-label="Toggle theme"
+            style={{ marginLeft: '20px' }}
+          >
+            {theme === 'dark' ? (
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="5" fill="#fff" stroke="#2196f3" strokeWidth="2"/>
+                <path d="M12 1v2M12 21v2M3.22 3.22l1.42 1.42M19.36 19.36l1.42 1.42M1 12h2M21 12h2M3.22 20.78l1.42-1.42M19.36 4.64l1.42-1.42" stroke="#2196f3" strokeWidth="1.5" strokeLinecap="round"/>
+              </svg>
+            ) : (
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="#fff" stroke="#2196f3" strokeWidth="2"/>
+              </svg>
+            )}
+          </button>
         </div>
 
         {isMobileMenuOpen && windowWidth <= 768 && (
