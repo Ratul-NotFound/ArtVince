@@ -109,39 +109,41 @@ body.theme-dark {
 }
 
 body.theme-light {
-  --bg: #fafbff;
-  --text: #0f1419;
-  --text-20: rgba(15, 20, 25, 0.20);
-  --text-40: rgba(15, 20, 25, 0.40);
-  --text-45: rgba(15, 20, 25, 0.45);
-  --text-60: rgba(15, 20, 25, 0.60);
-  --text-75: rgba(15, 20, 25, 0.75);
-  --text-80: rgba(15, 20, 25, 0.80);
-  --text-85: rgba(15, 20, 25, 0.85);
-  --accent: #0066ff;
-  --accent-02: rgba(0, 102, 255, 0.02);
-  --accent-03: rgba(0, 102, 255, 0.03);
-  --accent-04: rgba(0, 102, 255, 0.04);
-  --accent-05: rgba(0, 102, 255, 0.05);
-  --accent-06: rgba(0, 102, 255, 0.06);
-  --accent-08: rgba(0, 102, 255, 0.08);
-  --accent-10: rgba(0, 102, 255, 0.10);
-  --accent-12: rgba(0, 102, 255, 0.12);
-  --accent-15: rgba(0, 102, 255, 0.15);
-  --accent-20: rgba(0, 102, 255, 0.20);
-  --accent-25: rgba(0, 102, 255, 0.25);
-  --accent-30: rgba(0, 102, 255, 0.30);
-  --accent-40: rgba(0, 102, 255, 0.40);
-  --accent-50: rgba(0, 102, 255, 0.50);
-  --accent-60: rgba(0, 102, 255, 0.60);
-  --accent-70: rgba(0, 102, 255, 0.70);
-  --accent-80: rgba(0, 102, 255, 0.80);
-  --accent-90: rgba(0, 102, 255, 0.90);
-  --line: rgba(0, 102, 255, 0.08);
-  --dim: #4a5568;
+  --bg: #f8f9fe;
+  --text: #0a0e27;
+  --text-20: rgba(10, 14, 39, 0.20);
+  --text-40: rgba(10, 14, 39, 0.40);
+  --text-45: rgba(10, 14, 39, 0.45);
+  --text-60: rgba(10, 14, 39, 0.60);
+  --text-75: rgba(10, 14, 39, 0.75);
+  --text-80: rgba(10, 14, 39, 0.80);
+  --text-85: rgba(10, 14, 39, 0.85);
+  --accent: #3b82f6;
+  --accent-02: rgba(59, 130, 246, 0.02);
+  --accent-03: rgba(59, 130, 246, 0.03);
+  --accent-04: rgba(59, 130, 246, 0.04);
+  --accent-05: rgba(59, 130, 246, 0.05);
+  --accent-06: rgba(59, 130, 246, 0.06);
+  --accent-08: rgba(59, 130, 246, 0.08);
+  --accent-10: rgba(59, 130, 246, 0.10);
+  --accent-12: rgba(59, 130, 246, 0.12);
+  --accent-15: rgba(59, 130, 246, 0.15);
+  --accent-20: rgba(59, 130, 246, 0.20);
+  --accent-25: rgba(59, 130, 246, 0.25);
+  --accent-30: rgba(59, 130, 246, 0.30);
+  --accent-40: rgba(59, 130, 246, 0.40);
+  --accent-50: rgba(59, 130, 246, 0.50);
+  --accent-60: rgba(59, 130, 246, 0.60);
+  --accent-70: rgba(59, 130, 246, 0.70);
+  --accent-80: rgba(59, 130, 246, 0.80);
+  --accent-90: rgba(59, 130, 246, 0.90);
+  --line: rgba(59, 130, 246, 0.12);
+  --dim: #475569;
   --surface: #ffffff;
   --card-bg: #ffffff;
-  background: linear-gradient(135deg, #fafbff 0%, #f0f4ff 100%);
+  background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(139, 92, 246, 0.15), transparent),
+              radial-gradient(ellipse 60% 80% at 100% 100%, rgba(59, 130, 246, 0.12), transparent),
+              linear-gradient(180deg, #f8f9fe 0%, #eef2ff 100%);
   color: var(--text);
 }
 /* Light Mode Cards */
